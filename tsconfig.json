@@ -16,7 +16,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
-    "suppressImplicitAnyIndexErrors": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
