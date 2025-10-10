@@ -22,7 +22,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     // Replace undefined movieLink with null so the props can be JSON-serialized
     const serializedMovie: Movie & { movieLink: string | null } = {
         ...movie,
-        movieLink: movie.movieLink ?? null
+        movieLink: movie.movieLink ?? null,
+        movieLink_2: movie.movieLink_2 ?? null
     };
 
     return {
@@ -33,7 +34,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 type Props = { movie: Movie & { movieLink?: string | null } };
 
 const MoviePage: NextPage<Props> = ({ movie }) => {
-    const genres = Array.isArray(movie.genres) ? movie.genres.join(", ") : movie.genres;
 
     return (
         <main>
