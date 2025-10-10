@@ -19,7 +19,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         return { notFound: true };
     }
 
-    // Replace undefined movieLink with null so the props can be JSON-serialized
     const serializedMovie: Movie & { movieLink: string | null } = {
         ...movie,
         movieLink: movie.movieLink ?? null,
