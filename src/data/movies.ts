@@ -12,7 +12,7 @@ export interface Movie {
 
 export const movies: Movie[] = [
     {
-        id: "andrew-orozco-1",
+        id: "andrew-orozco-the-movie",
         title: "Andrew Orozco The Movie",
         year: "January 19th, 2018",
         creator: "JoJuan Johnson",
@@ -22,7 +22,7 @@ export const movies: Movie[] = [
         functionName: "AndrewOrozco1",
     },
     {
-        id: "andrew-orozco-2",
+        id: "andrew-orozco-the-sequel",
         title: "Andrew Orozco The Sequel",
         year: "January 4th, 2019",
         creator: "JoJuan Johnson",
@@ -32,7 +32,7 @@ export const movies: Movie[] = [
         functionName: "AndrewOrozco2",
     },
     {
-        id: "andrew-orozco-3",
+        id: "andrew-orozco-3-summers-here",
         title: "Andrew Orozco 3 Summer's Here",
         year: "July 3rd, 2020",
         creator: "JoJuan Johnson",
@@ -42,7 +42,7 @@ export const movies: Movie[] = [
         functionName: "AndrewOrozco3",
     },
     {
-        id: "caillou-movie",
+        id: "caillou-the-movie",
         title: "Caillou The Movie",
         year: "October 2nd, 2022",
         creator: "Anti-Animations",
@@ -52,7 +52,7 @@ export const movies: Movie[] = [
         functionName: "Cailloumovie",
     },
     {
-        id: "caillou-across",
+        id: "caillou-across-the-caillouverse",
         title: "Caillou Across the Caillouverse",
         year: "January 13 2025",
         creator: "Akula BO",
@@ -62,7 +62,7 @@ export const movies: Movie[] = [
         functionName: "CaillouAcross",
     },
     {
-        id: "caillou-into",
+        id: "caillou-into-the-caillouverse",
         title: "Caillou Into the Caillouverse",
         year: "December 2, 2023",
         creator: "Akula BO",
@@ -72,7 +72,7 @@ export const movies: Movie[] = [
         functionName: "CaillouInto",
     },
     {
-        id: "cftwcftl-123",
+        id: "cftwcftl-the-movie-123",
         title: "CFTWCFTL The Movie 123",
         year: "2022",
         creator: "Veyshal & 1Leon",
@@ -82,7 +82,7 @@ export const movies: Movie[] = [
         functionName: "Cftwcftl123",
     },
     {
-        id: "cftwcftl-4",
+        id: "cftwcftl-the-movie-4",
         title: "CFTWCFTL The Movie 4",
         year: "August 24th, 2022",
         creator: "Veyshal & 1Leon",
@@ -92,7 +92,7 @@ export const movies: Movie[] = [
         functionName: "Cftwcftl4",
     },
     {
-        id: "cftwcftl-5",
+        id: "cftwcftl-the-movie-5",
         title: "CFTWCFTL The Movie 5",
         year: "December 2nd, 2022",
         creator: "Veyshal & 1Leon",
@@ -102,7 +102,7 @@ export const movies: Movie[] = [
         functionName: "Cftwcftl5",
     },
     {
-        id: "ga-bricks",
+        id: "ga-bricks-the-movie",
         title: "GA Bricks The Movie",
         year: "April 1st, 2022",
         creator: "JoJuanJohnson",
@@ -112,7 +112,7 @@ export const movies: Movie[] = [
         functionName: "Gabricks",
     },
     {
-        id: "goofus-1",
+        id: "goofus-and-doofus-1",
         title: "Goofus & Doofus",
         year: "March 2nd, 2023",
         creator: "Veyshal & 1Leon",
@@ -122,7 +122,7 @@ export const movies: Movie[] = [
         functionName: "Goofus1",
     },
     {
-        id: "goofus-2",
+        id: "goofus-and-doofus-2",
         title: "Goofus & Doofus 2",
         year: "August 3, 2023",
         creator: "Veyshal & 1Leon",
@@ -132,7 +132,7 @@ export const movies: Movie[] = [
         functionName: "Goofus2",
     },
     {
-        id: "horrid-james",
+        id: "the-horrid-james-movie",
         title: "The Horrid James Movie",
         year: "May 9th, 2025",
         creator: "BraxtonTheVyonder2009",
@@ -142,7 +142,7 @@ export const movies: Movie[] = [
         functionName: "HorridJames",
     },
     {
-        id: "retro-and-ellie",
+        id: "i-now-pronounce-you-retro-and-ellie",
         title: "I Now Pronounce You Retro and Ellie",
         year: "February 22nd 2025",
         creator: "Retromiller1997",
@@ -152,7 +152,7 @@ export const movies: Movie[] = [
         functionName: "RetroAndEllie",
     },
     {
-        id: "jp-christmas",
+        id: "its-jack-paul-christmas",
         title: "It's Jack Paul Christmas",
         year: "December 14th, 2022",
         creator: "Rosie Bros Studios",
@@ -162,7 +162,7 @@ export const movies: Movie[] = [
         functionName: "Jpchristmas",
     },
     {
-        id: "jp-spooktacular",
+        id: "jack-paul-spooktacular",
         title: "Jack Paul Spooktacular",
         year: "October 21st, 2023",
         creator: "Rosie Bros Studios",
@@ -173,7 +173,7 @@ export const movies: Movie[] = [
         functionName: "Jpspooktacular",
     },
     {
-        id: "jack-paul",
+        id: "jack-paul-the-movie",
         title: "Jack Paul The Movie",
         year: "August 5th, 2022",
         creator: "Rosie Bros Studios",
@@ -183,7 +183,7 @@ export const movies: Movie[] = [
         functionName: "Jackpaul",
     },
     {
-        id: "little-valendies",
+        id: "little-bills-valendies-movie",
         title: "Little Bill's Valendies Movie",
         year: "August 27th, 2022",
         creator: "ClassicCaillouX645Grounded",
@@ -213,7 +213,7 @@ export const movies: Movie[] = [
         functionName: "Nightshiftsurvival",
     },
     {
-        id: "rosie-gets-grounded",
+        id: "rosie-gets-grounded-the-movie",
         title: "Rosie Gets Grounded The Movie",
         year: "January 23, 2024",
         creator: "Jett Kingston",
@@ -223,7 +223,7 @@ export const movies: Movie[] = [
         functionName: "Rosiegetsgrounded",
     },
     {
-        id: "comedy-world",
+        id: "the-comedy-world-movie",
         title: "The Comedy World Movie",
         year: "January 20th, 2023",
         creator: "AllenGuy23",
@@ -233,7 +233,7 @@ export const movies: Movie[] = [
         functionName: "Comedyworld",
     },
     {
-        id: "surfs-peasants",
+        id: "the-surfs-and-the-peasants",
         title: "The Surfs And The Peasants",
         year: "August 23rd, 2024",
         creator: "BraxtonTheVyonder2009",
@@ -243,27 +243,27 @@ export const movies: Movie[] = [
         functionName: "Serbs",
     },
     {
-        id: "veyshal-movie",
+        id: "the-veyshal-movie",
         title: "The Veyshal Movie",
         year: "December 25th, 2024",
         creator: "Veyshal",
-        genres: "Animation/Action/Comedy/Drama/Thriller/Crime",
+        genres: "Animation/Action/Comedy",
         movieLink: process.env.VITE_MOVIE_LINK_VEYSHALMOVIE,
         url: "/The-Veyshal-Movie",
         functionName: "Veyshalmovie",
     },
     {
-        id: "vyond-cinema",
+        id: "the-vyond-cinema-movie",
         title: "The Vyond Cinema Movie",
         year: "July 22, 2023",
         creator: "AllenGuy23",
-        genres: "Animation/Crime/Adventure/Crossover",
+        genres: "Animation/Crime/Adventure",
         movieLink: process.env.VITE_MOVIE_LINK_VYONDCINEMA,
         url: "/The-Vyond-Cinema-Movie",
         functionName: "Vyondcinema",
     },
     {
-        id: "unhappy-25",
+        id: "unhappy-25-years-little-brat",
         title: "Unhappy 25 Years Little Brat",
         year: "December 20th, 2024",
         creator: "ClassicCaillouX645Grounded",
@@ -273,7 +273,7 @@ export const movies: Movie[] = [
         functionName: "Unhappy",
     },
     {
-        id: "vance-productions",
+        id: "vance-productions-the-movie",
         title: "Vance Productions: The Movie",
         year: "May 21st, 2021",
         creator: "Ridenour Pictures",
@@ -283,7 +283,7 @@ export const movies: Movie[] = [
         functionName: "VanceProd",
     },
     {
-        id: "weatherstar",
+        id: "weatherstar4000video-the-movie",
         title: "WeatherStar4,000video: The Movie",
         year: "July 19th, 2019",
         creator: "WeatherStar4,000video",

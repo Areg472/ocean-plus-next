@@ -1,0 +1,48 @@
+.accord {
+  text-align: left;
+}
+
+.issue {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-device-width: 1023px) {
+  .theframe {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 180px;
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .issue {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .theframe {
+    margin-left: 17%;
+    width: 320px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .issue {
+    width: 950px;
+    margin: 0 auto;
+  }
+
+  .theframe {
+    margin-left: 16%;
+    width: 640px;
+    height: 360px;
+  }
+}

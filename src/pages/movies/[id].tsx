@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { movies, Movie } from "@/data/movies";
 import React from "react";
 import type { NextPage } from "next";
+import {MoviePage} from "@/components/MoviePage";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = movies.map((movie: { id: string }) => ({
@@ -19,7 +20,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         return { notFound: true };
     }
 
-    const serializedMovie: Movie & { movieLink: string | null } = {
+    const serializedMovie: Movie & { movieLink: string | null; movieLink_2: string | null } = {
         ...movie,
         movieLink: movie.movieLink ?? null,
         movieLink_2: movie.movieLink_2 ?? null
@@ -30,15 +31,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
 };
 
-type Props = { movie: Movie & { movieLink?: string | null } };
+type Props = { movie: Movie & { movieLink: string | null; movieLink_2: string | null } };
 
-const MoviePage: NextPage<Props> = ({ movie }) => {
+const MoviePages: NextPage<Props> = ({ movie }) => {
 
     return (
         <main>
-            <h1>HIII</h1>
+           <MoviePage title={movie.title} creator={movie.creator} movieLink={movie.movieLink} movieLink_2={movie.movieLink_2} year={movie.year} genres={movie.genres} />
         </main>
     );
 };
 
-export default MoviePage;
+export default MoviePages;

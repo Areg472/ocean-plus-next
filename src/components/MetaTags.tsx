@@ -1,0 +1,33 @@
+import Head from "next/head";
+import { useRouter } from "next/router";
+
+function MetaTags({ title = "", description = "", image = "", name = "" }) {
+    const router = useRouter();
+    const url = `https://new.oceanbluestream.com${router.asPath}`;
+    return (
+        <Head>
+            {/* Standard metadata tags */}
+            <title>{title}</title>
+            <link rel="canonical" href={url} />
+            <meta name="description" content={description} />
+            {/* Open Graph tags (OG) */}
+            <meta property="og:url" content={url} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            {/* OG image tags */}
+            <meta property="og:image" content={image} />
+            <meta property="og:image:secure_url" content={image} />
+            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:width" content="200" />
+            <meta property="og:image:alt" content={`Image of ${title} site`} />
+            {/* Twitter tags */}
+            <meta name="twitter:creator" content={name} />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description} />
+        </Head>
+    );
+}
+
+export default MetaTags;

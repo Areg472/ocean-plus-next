@@ -1,17 +1,16 @@
-/*
-import MetaTags from "@/components/MetaTags.tsx";
+import MetaTags from "@/components/MetaTags";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import "../pages/moviepage.css";
+import "./moviepage.css";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import SearchPage from "@/components/SearchPage.tsx";
+import SearchPage from "@/components/SearchPage";
 
 export function MoviePage({
   creator = "",
@@ -166,4 +165,3 @@ export function MoviePage({
     </>
   );
 }
-*/
