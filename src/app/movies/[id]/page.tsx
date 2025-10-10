@@ -4,15 +4,16 @@ import { MoviePage } from "@/components/MoviePage";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-    return movies.map((movie: { id: string }) => ({ id: movie.id }));
+    return movies.map((movie) => ({ id: String(movie.id) }));
 }
 
-type RouteParams = { id?: string };
-type Props = { params: RouteParams | Promise<RouteParams> }; // avoid `any` and allow awaiting params
+type RouteParams = { id: string };
+type Props = { params: Promise<RouteParams> };
 
 export default async function Page({ params }: Props) {
-    const { id } = await params; // typed as RouteParams after await
-    const movie = movies.find((m: { id: string }) => m.id === id) ?? null;
+    const { id } = await params;
+
+    const movie = movies.find((m) => String(m.id) === id);
 
     if (!movie) {
         notFound();
@@ -30,14 +31,15 @@ export default async function Page({ params }: Props) {
 
     return (
         <main>
-           <MoviePage
-             title={movie.title}
-             creator={movie.creator}
-             movieLink={primaryLink}
-             year={movie.year}
-             genres={movie.genres}
-             {...(movie.movieLink_2 ? { movieLink_2: movie.movieLink_2 } : {})}
-           />
+            <MoviePage
+                title={movie.title}
+                creator={movie.creator}
+                movieLink={primaryLink}
+                year={movie.year}
+                genres={movie.genres}
+                {...(movie.movieLink_2 ? { movieLink_2: movie.movieLink_2 } : {})}
+            />
         </main>
     );
 }
+
