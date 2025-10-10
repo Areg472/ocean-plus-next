@@ -1,9 +1,11 @@
+"use client";
+
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 function MetaTags({ title = "", description = "", image = "", name = "" }) {
-    const router = useRouter();
-    const url = `https://new.oceanbluestream.com${router.asPath}`;
+    const pathname = usePathname();
+    const url = `https://new.oceanbluestream.com${pathname ?? '/'}`;
     return (
         <Head>
             {/* Standard metadata tags */}

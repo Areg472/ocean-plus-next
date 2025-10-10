@@ -3,33 +3,29 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { movies } from "@/data/movies";
-import { shorts } from "@/data/shorts";
+// import { shorts } from "@/data/shorts";
 
 const items = [
     ...movies.map((movie) => ({
         title: movie.title,
         type: "movie",
-        // Use the movie id to link to the dynamic movie page under /movies/[id]
         route: `/movies/${movie.id}`,
     })),
-    ...shorts.map((short) => ({
-        title: short.title,
-        type: "short",
-        route: short.url,
-    })),
+    // ...shorts.map((short) => ({
+    //     title: short.title,
+    //     type: "short",
+    //     route: short.url,
+    // })),
 ];
 
-// Simple fuzzy search function
 function fuzzySearch(query: string, text: string): number {
     const queryLower = query.toLowerCase();
     const textLower = text.toLowerCase();
 
-    // Exact match gets highest score
     if (textLower.includes(queryLower)) {
         return 100;
     }
 
-    // Calculate fuzzy match score
     let score = 0;
     let queryIndex = 0;
 
@@ -40,7 +36,6 @@ function fuzzySearch(query: string, text: string): number {
         }
     }
 
-    // Return score as percentage of query length matched
     return queryIndex === queryLower.length
         ? (score / queryLower.length) * 80
         : 0;
@@ -125,7 +120,7 @@ export default function SearchPage() {
                                         className={`mt-1 inline-block rounded-full px-2 py-0.5 text-xs font-semibold tracking-wide uppercase ${
                                             item.type === "movie"
                                                 ? "bg-blue-100 text-blue-800"
-                                                : "bg-green-100 text-green-800"
+                                                : /* "bg-green-100 text-green-800" */ ""
                                         }`}
                                     >
                     {item.type}
