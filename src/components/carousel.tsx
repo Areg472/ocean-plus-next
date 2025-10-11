@@ -7,10 +7,10 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
-interface CarouselImage {
-    src: string;
+export interface CarouselImage {
+    src: string | StaticImageData;
     alt: string;
     link: string;
 }

@@ -6,6 +6,11 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import "./movieratings.css";
+import aIcon from "../../public/aicon.png";
+import sevenIcon from "../../public/7icon.png";
+import tIcon from "../../public/ticon.png";
+import mIcon from "../../public/micon.png";
+import xIcon from "../../public/xicon.png";
 
 export default function MoviesRatingsComp() {
     return (
@@ -43,20 +48,16 @@ export default function MoviesRatingsComp() {
                                 >
                                     <CarouselContent>
                                         <CarouselItem>
-                                            <img
+                                            <Image
                                                 alt="aicon"
-                                                src={
-                                                    "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/aicon.png"
-                                                }
+                                                src={aIcon}
                                                 className="one"
                                             />
                                             <p className="onep">Everyone</p>
                                         </CarouselItem>
                                         <CarouselItem>
                                             <Image
-                                                src={
-                                                    "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/7icon.png"
-                                                }
+                                                src={sevenIcon}
                                                 className="one"
                                                 alt="7icon"
                                             />
@@ -64,29 +65,23 @@ export default function MoviesRatingsComp() {
                                         </CarouselItem>
                                         <CarouselItem>
                                             <Image
-                                                src={
-                                                    "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/ticon.png"
-                                                }
+                                                src={tIcon}
                                                 className="one"
                                                 alt="ticon"
                                             />
                                             <p className="onep">Teens(13+)</p>
                                         </CarouselItem>
                                         <CarouselItem>
-                                            <img
-                                                src={
-                                                    "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/micon.png"
-                                                }
+                                            <Image
+                                                src={mIcon}
                                                 className="one"
                                                 alt="micon"
                                             />
                                             <p className="onep">Mature(17+)</p>
                                         </CarouselItem>
                                         <CarouselItem>
-                                            <img
-                                                src={
-                                                    "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/xicon.png"
-                                                }
+                                            <Image
+                                                src={xIcon}
                                                 className="one"
                                                 alt="xicon"
                                             />

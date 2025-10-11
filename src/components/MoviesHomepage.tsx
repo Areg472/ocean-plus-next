@@ -2,39 +2,51 @@
 
 import React from "react";
 import Link from "next/link";
+import "./movies.css";
 import SearchPage from "@/components/SearchPage";
 import { motion } from "motion/react";
 import CarouselSection from "@/components/carousel";
+import mathWarfare from "../../public/math-warfare.png";
+import veyshalMovie from "../../public/veyshal-movie.png";
+import blahBlah from "../../public/blah-blah.jpg";
+import comedyWorld from "../../public/comedy-world-the-movie.png";
+import caillouMovie from "../../public/caillou-the-movie.png";
+import littleBill from "../../public/little-bill.png";
+import goofusDoofus from "../../public/goofus-doofus.png";
+import jpXmas from "../../public/jp-xmas.png";
+import cft4 from "../../public/cft-4.png";
+import goofusDoofus2 from "../../public/goofus-doofus-2.png";
+import jpSpooky from "../../public/jp-spooky.png";
 
 export default function MoviesHomepage() {
     const popularMovies = [
         {
-            src: "https://utfs.io/f/thKihuQxhYcPR9qV068jPw6fdIECzMhtipamGqxBYSHgKr9L",
+            src: mathWarfare,
             alt: "math-warfare",
             link: "/Math-warfare",
         },
         {
-            src: "https://utfs.io/f/thKihuQxhYcPULaG6TMKZeI96M7cYWXw5LuFxkzjOQmv0ghA",
-            alt: "Veyshal movie",
+            src: veyshalMovie,
+            alt: "The Veyshal movie",
             link: "/The-veyshal-movie",
         },
         {
-            src: "https://gr5mutu1hr.ufs.sh/f/thKihuQxhYcPnZKj7BJqSrG7F3ilObYXHjDPRupZ6a15IhtQ",
+            src: blahBlah,
             alt: "Bla bla thing",
             link: "/The-random-green-blah-blah-thing",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Comedy-World-The-Movie-Ocean-Poster00086400.png",
+            src: comedyWorld,
             alt: "Comedy world",
             link: "/The-comedy-world-movie",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Cailou-the-movie-thumbnail00086400.png",
+            src: caillouMovie,
             alt: "caillou",
             link: "/Caillou-the-movie",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Littles-Bill-Valendies-Day-Movie-poster-ocean00086400.png",
+            src: littleBill,
             alt: "Little bill",
             link: "/Little-bills-valendies-movie",
         },
@@ -42,32 +54,32 @@ export default function MoviesHomepage() {
 
     const adventureMovies = [
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Goofus-Doofus-ocean-poster-with-the-template00086400.png",
+            src: goofusDoofus,
             alt: "goofusdoofus1",
             link: "/Goofus-and-Doofus-1",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Cailou-the-movie-thumbnail00086400.png",
+            src: caillouMovie,
             alt: "caillou",
             link: "/Caillou-the-movie",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Its-Jack-Paul-Christmas-ocean-poster-with-the-template00086400.png",
+            src: jpXmas,
             alt: "jpxmas",
             link: "/Its-Jack-Paul-Christmas",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/CFTWCFTL-The-Movie-4-ocean-poster-with-the-template00086400.png",
+            src: cft4,
             alt: "cft4",
             link: "/Cftwcftl-the-movie-4",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Goofus-Doofus-2-ocean-poster-with-the-template00086400.png",
+            src: goofusDoofus2,
             alt: "goofusdoofus2",
             link: "/Goofus-and-Doofus-2",
         },
         {
-            src: "https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/Jack-Paul-Spooktacular-ocean-poster-with-the-template00086400.png",
+            src: jpSpooky,
             alt: "jpspooky",
             link: "/Jack-Paul-Spooktacular",
         },
@@ -114,4 +126,3 @@ export default function MoviesHomepage() {
         </>
     );
 }
-
