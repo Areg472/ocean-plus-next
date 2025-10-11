@@ -1,58 +1,58 @@
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
 
 export interface CarouselImage {
-    src: string | StaticImageData;
-    alt: string;
-    link: string;
+  src: string | StaticImageData;
+  alt: string;
+  link: string;
 }
 
 interface CarouselSectionProps {
-    title: string;
-    images: CarouselImage[];
-    delay?: number;
+  title: string;
+  images: CarouselImage[];
+  delay?: number;
 }
 
 export default function CarouselSection({
-                                            title,
-                                            images,
-                                            delay = 7500,
-                                        }: CarouselSectionProps) {
-    return (
-        <>
-            <h3 className="text-4xl leading-normal">{title}</h3>
-            <Carousel
-                className="carousel dark relative mt-4 px-4 md:px-12 lg:px-10"
-                plugins={[
-                    Autoplay({
-                        delay,
-                    }),
-                ]}
-                opts={{
-                    align: "start",
-                    loop: true,
-                }}
-            >
-                <CarouselContent>
-                    {images.map((image, index) => (
-                        <CarouselItem key={index} className="md:basis-full lg:basis-1/3">
-                            <Link href={image.link}>
-                                <Image src={image.src} alt={image.alt} />
-                            </Link>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-2 md:top-1/2 md:left-2 lg:-left-8" />
-                <CarouselNext className="absolute right-2 md:top-1/2 md:right-2 lg:-right-8" />
-            </Carousel>
-        </>
-    );
+  title,
+  images,
+  delay = 7500,
+}: CarouselSectionProps) {
+  return (
+    <>
+      <h3 className="text-4xl leading-normal">{title}</h3>
+      <Carousel
+        className="carousel dark relative mt-4 px-4 md:px-12 lg:px-10"
+        plugins={[
+          Autoplay({
+            delay,
+          }),
+        ]}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+      >
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index} className="md:basis-full lg:basis-1/3">
+              <Link href={image.link}>
+                <Image src={image.src} alt={image.alt} />
+              </Link>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-2 md:top-1/2 md:left-2 lg:-left-8" />
+        <CarouselNext className="absolute right-2 md:top-1/2 md:right-2 lg:-right-8" />
+      </Carousel>
+    </>
+  );
 }

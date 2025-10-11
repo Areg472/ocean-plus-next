@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-const SITE_URL = 'https://new.oceanbluestream.com';
-const DEFAULT_IMAGE = '/logo.jpg';
+const SITE_URL = "https://new.oceanbluestream.com";
+const DEFAULT_IMAGE = "/logo.jpg";
 
 type CreateMetaOpts = {
   title?: string;
@@ -11,10 +11,10 @@ type CreateMetaOpts = {
 };
 
 export function createMetadata({
-  title = 'Ocean+',
-  description = 'The place to watch all of your favorite Vyond content, anywhere, anytime for free!',
+  title = "Ocean+",
+  description = "The place to watch all of your favorite Vyond content, anywhere, anytime for free!",
   image = DEFAULT_IMAGE,
-  pathname = '/',
+  pathname = "/",
 }: CreateMetaOpts): Metadata {
   const url = `${SITE_URL}${pathname}`;
 
@@ -26,8 +26,8 @@ export function createMetadata({
       url,
       title,
       description,
-        siteName: 'Ocean+',
-      type: 'website',
+      siteName: "Ocean+",
+      type: "website",
       images: [
         {
           url: image,
@@ -38,11 +38,10 @@ export function createMetadata({
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: [image],
     },
   };
 }
-

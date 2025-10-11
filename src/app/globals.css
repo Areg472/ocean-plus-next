@@ -6,41 +6,41 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-*: initial;
-    --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-*: initial;
+  --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-    --radius-lg: var(--radius);
-    --radius-md: calc(var(--radius) - 2px);
-    --radius-sm: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 
-    --color-sidebar: hsl(var(--sidebar-background));
-    --color-sidebar-foreground: hsl(var(--sidebar-foreground));
-    --color-sidebar-primary: hsl(var(--sidebar-primary));
-    --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
-    --color-sidebar-accent: hsl(var(--sidebar-accent));
-    --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
-    --color-sidebar-border: hsl(var(--sidebar-border));
-    --color-sidebar-ring: hsl(var(--sidebar-ring));
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
 
-    --animate-accordion-down: accordion-down 0.2s ease-out;
-    --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
 
-    @keyframes accordion-down {
-        from {
-            height: 0;
-        }
-        to {
-            height: var(--radix-accordion-content-height);
-        }
+  @keyframes accordion-down {
+    from {
+      height: 0;
     }
-    @keyframes accordion-up {
-        from {
-            height: var(--radix-accordion-content-height);
-        }
-        to {
-            height: 0;
-        }
+    to {
+      height: var(--radix-accordion-content-height);
     }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
 }
 
 /*
@@ -52,99 +52,100 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
-    }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
 @layer utilities {
-    @media (min-width: 1000px) {
-        :root {
-            font-family: "Raleway", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
+  @media (min-width: 1000px) {
+    :root {
+      font-family: "Raleway", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
 
-            color-scheme: light dark;
-            color: rgba(255, 255, 255, 0.87);
+      color-scheme: light dark;
+      color: rgba(255, 255, 255, 0.87);
 
-            font-synthesis: none;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background: url("../../public/background.jpg") center center fixed no-repeat;
-            object-fit: fill;
-            overflow-x: hidden;
-            background-size: 130% 400%;
-        }
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: url("../../public/background.jpg") center center fixed
+        no-repeat;
+      object-fit: fill;
+      overflow-x: hidden;
+      background-size: 130% 400%;
     }
+  }
 
-    @media (min-width: 320px) and (max-width: 999px) {
-        :root {
-            font-family: "Raleway", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
+  @media (min-width: 320px) and (max-width: 999px) {
+    :root {
+      font-family: "Raleway", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
 
-            color-scheme: light dark;
-            color: rgba(255, 255, 255, 0.87);
+      color-scheme: light dark;
+      color: rgba(255, 255, 255, 0.87);
 
-            font-synthesis: none;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background-size: 200% 300%;
-            overflow-x: hidden;
-            background: url("../../public/background.jpg") fixed center center;
-        }
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-size: 200% 300%;
+      overflow-x: hidden;
+      background: url("../../public/background.jpg") fixed center center;
     }
+  }
 
-    body {
-        margin: 0;
-        display: flex;
-        place-items: center;
-        justify-content: center;
-        min-width: 320px;
-        min-height: 100vh;
-    }
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
 
-    @media (min-width: 320px) and (max-width: 999px) {
-        h1 {
-            font-size: 2.7em;
-            line-height: 1.1;
-        }
+  @media (min-width: 320px) and (max-width: 999px) {
+    h1 {
+      font-size: 2.7em;
+      line-height: 1.1;
     }
+  }
 
-    @media (min-width: 1000px) {
-        h1 {
-            font-size: 3.2em;
-            line-height: 1.1;
-        }
+  @media (min-width: 1000px) {
+    h1 {
+      font-size: 3.2em;
+      line-height: 1.1;
     }
+  }
 }
 
 @layer base {
-    :root {
-        --radius: 0.5rem;
-        --sidebar-background: 0 0% 98%;
-        --sidebar-foreground: 240 5.3% 26.1%;
-        --sidebar-primary: 240 5.9% 10%;
-        --sidebar-primary-foreground: 0 0% 98%;
-        --sidebar-accent: 240 4.8% 95.9%;
-        --sidebar-accent-foreground: 240 5.9% 10%;
-        --sidebar-border: 220 13% 91%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
-    }
-    .dark {
-        --sidebar-background: 240 5.9% 10%;
-        --sidebar-foreground: 240 4.8% 95.9%;
-        --sidebar-primary: 224.3 76.3% 48%;
-        --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 240 3.7% 15.9%;
-        --sidebar-accent-foreground: 240 4.8% 95.9%;
-        --sidebar-border: 240 3.7% 15.9%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
-    }
+  :root {
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
