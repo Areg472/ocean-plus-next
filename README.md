@@ -1,1 +1,1 @@
-the 3rd revision of Ocean+.
+The 3rd revision of Ocean+.
