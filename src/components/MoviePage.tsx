@@ -1,6 +1,5 @@
 "use client";
 
-import MetaTags from "@/components/MetaTags";
 import {
   Accordion,
   AccordionContent,
@@ -22,7 +21,6 @@ export function MoviePage({
   movieLink = "",
   movieLink_2 = "",
 }) {
-  const movieTitleLow = title?.toLowerCase();
 
   const top = title == "Andrew Orozco The Movie";
   const bottom = title == "Unhappy 25 Years Little Brat";
@@ -37,12 +35,6 @@ export function MoviePage({
 
   return (
     <>
-      <MetaTags
-        title={`Ocean+ - ${title}`}
-        description={`Watch ${movieTitleLow} on Ocean+ for free!`}
-        image="https://raw.githubusercontent.com/Areg472/ocean-plus-react/refs/heads/main/src/pictures/logo.jpg"
-        name="Ocean+"
-      />
       <div>
         <motion.div
           initial={{ opacity: 0, y: top ? 100 : -100 }}
