@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { createMetadata } from "@/lib/metadata";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased dark`}
       >
+      <SpeedInsights/>
         {IS_PRODUCTION && HEAP_ID && (
           <Script
             id="heap-init"
