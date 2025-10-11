@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Accordion,
@@ -9,9 +9,10 @@ import {
 import "./moviepage.css";
 import { motion } from "motion/react";
 import { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+
 import SearchPage from "@/components/SearchPage";
+import TwoDThreeDSwitch from "@/components/TwoDThreeDSwitch";
+import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
 
 export function MoviePage({
   creator = "",
@@ -21,9 +22,6 @@ export function MoviePage({
   movieLink = "",
   movieLink_2 = "",
 }) {
-
-  const top = title == "Andrew Orozco The Movie";
-  const bottom = title == "Unhappy 25 Years Little Brat";
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -36,12 +34,6 @@ export function MoviePage({
   return (
     <>
       <div>
-        <motion.div
-          initial={{ opacity: 0, y: top ? 100 : -100 }}
-          transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: bottom ? -100 : 100 }}
-        >
           <div className="px-4 md:px-6 lg:px-8">
             <h1 className="issue text-center leading-normal lg:text-left">
               {title}
@@ -51,70 +43,13 @@ export function MoviePage({
             </div>
             <div className="grid grid-cols-1 gap-4">
               <div className="w-full">
-                <Accordion type="single" collapsible>
-                  <motion.div
-                    whileHover={{ scale: 1.045 }}
-                    transition={{ ease: ["circInOut"] }}
-                  >
-                    <AccordionItem value="item-1">
-                      <AccordionTrigger>
-                        Who is the creator of this movie?
-                      </AccordionTrigger>
-                      <AccordionContent className="accord">
-                        Created by {creator}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.045 }}
-                    transition={{ ease: ["circInOut"] }}
-                  >
-                    <AccordionItem value="item-2">
-                      <AccordionTrigger>When was it released?</AccordionTrigger>
-                      <AccordionContent className="accord">
-                        It was released on {year}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.045 }}
-                    transition={{ ease: ["circInOut"] }}
-                  >
-                    <AccordionItem value="item-3">
-                      <AccordionTrigger>What are the genres?</AccordionTrigger>
-                      <AccordionContent className="accord">
-                        The genres are: {genres}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </motion.div>
-                </Accordion>
+                <DynamicAccordionForMoviesAndShorts year={year} genres={genres} creator={creator}/>
               </div>
               <div className="w-full">
                 {isSpooky ? (
                   <div className="flex flex-col items-center space-y-4">
                     <div className="flex items-center space-x-2 p-4">
-                      <Label
-                        htmlFor="iframe-switch"
-                        className="mb-1 text-sm font-medium"
-                      >
-                        2D
-                      </Label>
-                      <motion.div
-                        whileHover={{ scale: 1.15 }}
-                        whileTap={{ scale: 0.9 }}
-                      >
-                        <Switch
-                          id="iframe-switch"
-                          checked={isChecked}
-                          onCheckedChange={handleSwitchChange}
-                        />
-                      </motion.div>
-                      <Label
-                        htmlFor="iframe-switch"
-                        className="mb-1 text-sm font-medium"
-                      >
-                        3D
-                      </Label>
+                      <TwoDThreeDSwitch isChecked={isChecked} handleSwitchChange={handleSwitchChange}/>
                     </div>
                     <div className="w-full">
                       {isChecked ? (
@@ -154,7 +89,6 @@ export function MoviePage({
               </div>
             </div>
           </div>
-        </motion.div>
       </div>
     </>
   );

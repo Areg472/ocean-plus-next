@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { movies } from "@/data/movies";
-// import { shorts } from "@/data/shorts";
+import { shorts } from "@/data/shorts";
 
 const items = [
     ...movies.map((movie) => ({
@@ -11,11 +11,11 @@ const items = [
         type: "movie",
         route: `/movies/${movie.id}`,
     })),
-    // ...shorts.map((short) => ({
-    //     title: short.title,
-    //     type: "short",
-    //     route: short.url,
-    // })),
+    ...shorts.map((short) => ({
+        title: short.title,
+        type: "short",
+        route: `/shorts/${short.id}`,
+    })),
 ];
 
 function fuzzySearch(query: string, text: string): number {
@@ -77,7 +77,7 @@ export default function SearchPage() {
 
     const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setQuery(e.target.value);
-        setSelectedIndex(0); // Reset selection when query changes
+        setSelectedIndex(0);
     };
 
     return (
@@ -120,7 +120,7 @@ export default function SearchPage() {
                                         className={`mt-1 inline-block rounded-full px-2 py-0.5 text-xs font-semibold tracking-wide uppercase ${
                                             item.type === "movie"
                                                 ? "bg-blue-100 text-blue-800"
-                                                : /* "bg-green-100 text-green-800" */ ""
+                                                : "bg-green-100 text-green-800"
                                         }`}
                                     >
                     {item.type}
