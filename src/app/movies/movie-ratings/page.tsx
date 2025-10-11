@@ -1,7 +1,6 @@
-import React from "react";
-import {createMetadata} from "@/lib/metadata";
+import MoviesRatingsComp from "@/components/MoviesRatingsComp";
 import type {Metadata} from "next";
-import MoviesHomepage from "@/components/MoviesHomepage";
+import {createMetadata} from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
     const title = "Ocean+ - Movies";
@@ -11,7 +10,8 @@ export async function generateMetadata(): Promise<Metadata> {
     return createMetadata({ title, description, pathname });
 }
 
-
-export default function Movies() {
-    return <MoviesHomepage />;
+export default function Movieratings() {
+    return (
+        <><MoviesRatingsComp /></>
+    );
 }

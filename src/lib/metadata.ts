@@ -26,6 +26,7 @@ export function createMetadata({
       url,
       title,
       description,
+        siteName: 'Ocean+',
       type: 'website',
       images: [
         {
