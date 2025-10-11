@@ -23,32 +23,32 @@ export default function MoviesHomepage() {
         {
             src: mathWarfare,
             alt: "math-warfare",
-            link: "/Math-warfare",
+            link: "/movies/math-warfare",
         },
         {
             src: veyshalMovie,
             alt: "The Veyshal movie",
-            link: "/The-veyshal-movie",
+            link: "/movies/the-veyshal-movie",
         },
         {
             src: blahBlah,
             alt: "Bla bla thing",
-            link: "/The-random-green-blah-blah-thing",
+            link: "/shorts/the-random-green-blah-blah-thing",
         },
         {
             src: comedyWorld,
             alt: "Comedy world",
-            link: "/The-comedy-world-movie",
+            link: "/movies/the-comedy-world-movie",
         },
         {
             src: caillouMovie,
             alt: "caillou",
-            link: "/Caillou-the-movie",
+            link: "/movies/caillou-the-movie",
         },
         {
             src: littleBill,
             alt: "Little bill",
-            link: "/Little-bills-valendies-movie",
+            link: "/movies/little-bills-valendies-movie",
         },
     ];
 
@@ -56,32 +56,32 @@ export default function MoviesHomepage() {
         {
             src: goofusDoofus,
             alt: "goofusdoofus1",
-            link: "/Goofus-and-Doofus-1",
+            link: "/movies/goofus-and-doofus-1",
         },
         {
             src: caillouMovie,
             alt: "caillou",
-            link: "/Caillou-the-movie",
+            link: "/movies/caillou-the-movie",
         },
         {
             src: jpXmas,
             alt: "jpxmas",
-            link: "/Its-Jack-Paul-Christmas",
+            link: "/movies/its-jack-paul-christmas",
         },
         {
             src: cft4,
             alt: "cft4",
-            link: "/Cftwcftl-the-movie-4",
+            link: "/movies/cftwcftl-the-movie-4",
         },
         {
             src: goofusDoofus2,
             alt: "goofusdoofus2",
-            link: "/Goofus-and-Doofus-2",
+            link: "/movies/goofus-and-doofus-2",
         },
         {
             src: jpSpooky,
             alt: "jpspooky",
-            link: "/Jack-Paul-Spooktacular",
+            link: "/movies/jack-paul-spooktacular",
         },
     ];
 
