@@ -1,6 +1,6 @@
 @media only screen and (max-device-width: 1023px) {
   .one {
-    margin-left: 0px;
+    margin-left: 0;
     transform: scale(70%);
   }
 }
@@ -14,7 +14,7 @@
 
 @media only screen and (max-device-width: 1023px) {
   .onep {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
