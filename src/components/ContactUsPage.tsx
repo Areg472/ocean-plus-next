@@ -4,6 +4,7 @@ import Turnstile, { useTurnstile } from "react-turnstile";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import "./contactus.css";
+import { useLogger } from "@logtail/next";
 
 declare global {
   interface Window {
@@ -16,6 +17,7 @@ declare global {
 
 export default function ContactUsPage() {
   const turnstile = useTurnstile();
+  const log = useLogger();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,6 +25,9 @@ export default function ContactUsPage() {
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email") as string;
     const name = formData.get("name") as string;
+    const message = formData.get("message") as string;
+
+    log.debug("Contact form submitted", { name, email, message });
 
     if (typeof window.heap !== "undefined") {
       window.heap.identify(name);
