@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useLogger } from "@logtail/next";
 import { movies } from "@/data/movies";
 import { shorts } from "@/data/shorts";
 
@@ -45,6 +46,7 @@ export default function SearchPage() {
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const router = useRouter();
+  const log = useLogger();
 
   const filtered = items
     .map((item) => ({
@@ -76,8 +78,20 @@ export default function SearchPage() {
   };
 
   const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
+    const newQuery = e.target.value;
+    setQuery(newQuery);
     setSelectedIndex(0);
+    log.debug("User typing in search", {
+      query: newQuery,
+      queryLength: newQuery.length,
+      resultsCount: filtered.length,
+      results: filtered.map((item) => ({
+        title: item.title,
+        type: item.type,
+        score: item.score,
+        route: item.route,
+      })),
+    });
   };
 
   return (
