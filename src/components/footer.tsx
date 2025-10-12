@@ -1,0 +1,42 @@
+import "./footer.css";
+import Image from "next/image";
+
+export function Footer() {
+  return (
+    <>
+      <div className="row lg:space-x-40">
+        <div className="column left">
+          <a target="_blank" href="https://link.oceanbluestream.com/discord">
+            <button className="buttons2 mb-1.5 cursor-pointer">Discord</button>
+          </a>
+          <a target="_blank" href="https://link.oceanbluestream.com/status">
+            <button className="buttons2 cursor-pointer">Status</button>
+          </a>
+        </div>
+        <div className="column">
+          <a target="_blank" href="https://uptime.betterstack.com">
+            <button className="buttons middle cursor-pointer">
+              <Image
+                className="uptimebutton"
+                alt="Better Stack Website Monitoring"
+                src="https://uptime.betterstack.com/assets/static_assets/badges/blue.png"
+                width={260}
+                height={104}
+              />
+            </button>
+          </a>
+        </div>
+        <div className="column">
+          <a
+            target="_blank"
+            href="https://link.oceanbluestream.com/oceanbluepictures"
+          >
+            <button className="buttons ml-0 cursor-pointer">
+              © Ocean Blue Studios, 2025
+            </button>
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}

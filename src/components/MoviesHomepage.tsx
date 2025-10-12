@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import "./movies.css";
 import SearchPage from "@/components/SearchPage";
-import { motion } from "motion/react";
 import CarouselSection from "@/components/carousel";
 import mathWarfare from "../../public/math-warfare.png";
 import veyshalMovie from "../../public/veyshal-movie.png";
@@ -23,32 +22,32 @@ export default function MoviesHomepage() {
     {
       src: mathWarfare,
       alt: "math-warfare",
-      link: "/movies/math-warfare",
+      link: "/s/movies/math-warfare",
     },
     {
       src: veyshalMovie,
       alt: "The Veyshal movie",
-      link: "/movies/the-veyshal-movie",
+      link: "/s/movies/the-veyshal-movie",
     },
     {
       src: blahBlah,
       alt: "Bla bla thing",
-      link: "/shorts/the-random-green-blah-blah-thing",
+      link: "/s/shorts/the-random-green-blah-blah-thing",
     },
     {
       src: comedyWorld,
       alt: "Comedy world",
-      link: "/movies/the-comedy-world-movie",
+      link: "/s/movies/the-comedy-world-movie",
     },
     {
       src: caillouMovie,
       alt: "caillou",
-      link: "/movies/caillou-the-movie",
+      link: "/s/movies/caillou-the-movie",
     },
     {
       src: littleBill,
       alt: "Little bill",
-      link: "/movies/little-bills-valendies-movie",
+      link: "/s/movies/little-bills-valendies-movie",
     },
   ];
 
@@ -56,32 +55,32 @@ export default function MoviesHomepage() {
     {
       src: goofusDoofus,
       alt: "goofusdoofus1",
-      link: "/movies/goofus-and-doofus-1",
+      link: "/s/movies/goofus-and-doofus-1",
     },
     {
       src: caillouMovie,
       alt: "caillou",
-      link: "/movies/caillou-the-movie",
+      link: "/s/movies/caillou-the-movie",
     },
     {
       src: jpXmas,
       alt: "jpxmas",
-      link: "/movies/its-jack-paul-christmas",
+      link: "/s/movies/its-jack-paul-christmas",
     },
     {
       src: cft4,
       alt: "cft4",
-      link: "/movies/cftwcftl-the-movie-4",
+      link: "/s/movies/cftwcftl-the-movie-4",
     },
     {
       src: goofusDoofus2,
       alt: "goofusdoofus2",
-      link: "/movies/goofus-and-doofus-2",
+      link: "/s/movies/goofus-and-doofus-2",
     },
     {
       src: jpSpooky,
       alt: "jpspooky",
-      link: "/movies/jack-paul-spooktacular",
+      link: "/s/movies/jack-paul-spooktacular",
     },
   ];
 
@@ -90,8 +89,10 @@ export default function MoviesHomepage() {
       <div className="Headings text-center mt-16 mb-12">
         <h1 className="mt-6 mb-4 leading-normal">Movies and shows!</h1>
 
-        <div className="mb-4 flex justify-center">
-          <SearchPage />
+        <div className="mt-2 mb-2 flex justify-center w-full px-4">
+          <div className="w-full max-w-xl">
+            <SearchPage />
+          </div>
         </div>
 
         <CarouselSection

@@ -1,0 +1,10 @@
+.oplusbuttons {
+  cursor: pointer;
+  transition: 0.4s;
+  width: 200px;
+}
+
+.oplusbuttons:hover {
+  box-shadow: 5px 5px 10px #60a5fa;
+  transition: 0.4s;
+}
