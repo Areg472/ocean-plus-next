@@ -5,14 +5,6 @@ import { createMetadata } from "@/lib/metadata";
 import "./homepage.css";
 import { Footer } from "@/components/footer";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ocean+ - Home";
-  const description = ``;
-  const pathname = `/`;
-
-  return createMetadata({ title, description, pathname });
-}
-
 export const metadata: Metadata = createMetadata({
   title: "Ocean+ - Home",
   description:
