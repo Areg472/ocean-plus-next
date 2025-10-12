@@ -4,16 +4,6 @@ import "./moviepage.css";
 import SearchPage from "@/components/SearchPage";
 import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
 
-const padTitle = (title: string): string => {
-  if (title.length >= 14) return title;
-
-  const spacesNeeded = 20 - title.length;
-  const spacesStart = Math.floor(spacesNeeded / 2);
-  const spacesEnd = spacesNeeded - spacesStart;
-
-  return "\u00A0".repeat(spacesStart) + title + "\u00A0".repeat(spacesEnd);
-};
-
 export function ShortPage({
   creator = "",
   year = "",
@@ -24,8 +14,14 @@ export function ShortPage({
     <>
       <div>
         <div className="px-4 md:px-6 lg:px-8">
-          <h1 className="issue text-center leading-normal lg:text-left">
-            {padTitle(title)}
+          <h1
+            className="issue text-center leading-normal lg:text-left"
+            style={{
+              minWidth: title.length < 14 ? "13.5ch" : "auto",
+              display: "inline-block",
+            }}
+          >
+            {title}
           </h1>
           <div className="mt-2 mb-2 flex justify-center">
             <SearchPage />

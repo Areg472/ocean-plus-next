@@ -109,7 +109,7 @@ export default function MoviesHomepage() {
 
         <div className="flex w-full justify-center">
           <Link href="/s/movies/movie-ratings">
-            <button className="button mt-10 h-[30px] cursor-pointer justify-center">
+            <button className="button mt-10 w-56 h-[30px] cursor-pointer justify-center">
               Movie age ratings
             </button>
           </Link>

@@ -6,7 +6,7 @@ import "./homepage.css";
 import { Footer } from "@/components/footer";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ocean+";
+  const title = "Ocean+ - Home";
   const description = `The place to watch all of your favorite Vyond content, anywhere, anytime for free!`;
   const pathname = `/`;
 
