@@ -87,40 +87,33 @@ export default function MoviesHomepage() {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: 0.75, type: "spring", bounce: 0.3 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -100 }}
-      >
-        <div className="Headings text-center">
-          <h1 className="mt-6 mb-4 leading-normal">Movies and shows!</h1>
+      <div className="Headings text-center mt-16 mb-12">
+        <h1 className="mt-6 mb-4 leading-normal">Movies and shows!</h1>
 
-          <div className="mb-4 flex justify-center">
-            <SearchPage />
-          </div>
-
-          <CarouselSection
-            title="Most Popular"
-            images={popularMovies}
-            delay={7500}
-          />
-
-          <CarouselSection
-            title="Adventure"
-            images={adventureMovies}
-            delay={7000}
-          />
-
-          <div className="flex w-full justify-center">
-            <Link href="/movies/movie-ratings">
-              <button className="button mt-10 h-[30px] cursor-pointer justify-center">
-                Movie age ratings
-              </button>
-            </Link>
-          </div>
+        <div className="mb-4 flex justify-center">
+          <SearchPage />
         </div>
-      </motion.div>
+
+        <CarouselSection
+          title="Most Popular"
+          images={popularMovies}
+          delay={7500}
+        />
+
+        <CarouselSection
+          title="Adventure"
+          images={adventureMovies}
+          delay={7000}
+        />
+
+        <div className="flex w-full justify-center">
+          <Link href="/s/movies/movie-ratings">
+            <button className="button mt-10 h-[30px] cursor-pointer justify-center">
+              Movie age ratings
+            </button>
+          </Link>
+        </div>
+      </div>
     </>
   );
 }

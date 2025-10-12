@@ -20,7 +20,7 @@ export default function Home() {
             Anywhere, anytime, for free, no restrictions.
           </h2>
           <div className="lg:space-x-3">
-            <Link href="/movies">
+            <Link href="/s/movies">
               <input
                 className="oplusbuttons text-white; mt-4 rounded-full bg-blue-400 px-4 py-2 leading-loose"
                 type="button"

@@ -54,7 +54,7 @@ export default async function Page({ params }: Props) {
   const primaryLink = short.shortLink ?? "";
 
   return (
-    <main>
+    <main className="mt-16 mb-12">
       <ShortPage
         title={short.title}
         creator={short.creator}

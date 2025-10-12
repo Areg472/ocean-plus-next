@@ -50,8 +50,8 @@ export default function CarouselSection({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-2 md:top-1/2 md:left-2 lg:-left-8" />
-        <CarouselNext className="absolute right-2 md:top-1/2 md:right-2 lg:-right-8" />
+        <CarouselPrevious className="absolute left-2 cursor-pointer bg-black" />
+        <CarouselNext className="absolute right-2 cursor-pointer bg-black" />
       </Carousel>
     </>
   );

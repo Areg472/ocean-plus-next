@@ -55,7 +55,7 @@ export default async function Page({ params }: Props) {
   const primaryLink = movie.movieLink ?? movie.movieLink_2 ?? "";
 
   return (
-    <main>
+    <main className="mt-16 mb-12">
       <MoviePage
         title={movie.title}
         creator={movie.creator}

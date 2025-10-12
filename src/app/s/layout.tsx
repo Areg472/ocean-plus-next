@@ -29,9 +29,11 @@ export default function SidebarLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SidebarProvider className="dark">
-      <SidebarContent />
-      <main>{children}</main>
-    </SidebarProvider>
+    <div className="dark">
+      <SidebarProvider className="dark" defaultOpen>
+        <SidebarContent />
+        <main>{children}</main>
+      </SidebarProvider>
+    </div>
   );
 }

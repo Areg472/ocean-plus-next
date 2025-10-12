@@ -53,7 +53,7 @@ const header = [
   },
   {
     title: "Movies",
-    url: "/movies",
+    url: "/s/movies",
     icon: Film,
   },
   {
@@ -105,7 +105,7 @@ const shortItems = shorts
 export function AppSidebar() {
   const scrollRef = useRef(null);
   return (
-    <Sidebar>
+    <Sidebar variant="sidebar">
       <SidebarHeader>
         <SidebarGroupLabel>Navigation</SidebarGroupLabel>
         <SidebarMenu>
@@ -144,7 +144,7 @@ export function AppSidebar() {
                 >
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href={`/shorts/${originals.url}`}>
+                      <Link href={`/s/shorts/${originals.url}`}>
                         <originals.icon />
                         <span>{originals.title}</span>
                       </Link>
@@ -173,7 +173,7 @@ export function AppSidebar() {
                 >
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href={`/movies/${item.url}`}>
+                      <Link href={`/s/movies/${item.url}`}>
                         <item.icon />
                         <span>{item.title}</span>
                       </Link>
@@ -202,7 +202,7 @@ export function AppSidebar() {
                 >
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href={`/shorts/${shortItem.url}`}>
+                      <Link href={`/s/shorts/${shortItem.url}`}>
                         <shortItem.icon />
                         <span>{shortItem.title}</span>
                       </Link>
