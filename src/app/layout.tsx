@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { createMetadata } from "@/lib/metadata";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { BetterStackWebVitals } from "@logtail/next";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} antialiased dark`}>
+        <BetterStackWebVitals />
         <SpeedInsights />
         {IS_PRODUCTION && HEAP_ID && (
           <Script
