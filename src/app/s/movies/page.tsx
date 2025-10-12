@@ -6,7 +6,7 @@ import MoviesHomepage from "@/components/MoviesHomepage";
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Ocean+ - Movies";
   const description = `The Ocean+ movies page!`;
-  const pathname = `/movies`;
+  const pathname = `/s/movies`;
 
   return createMetadata({ title, description, pathname });
 }
