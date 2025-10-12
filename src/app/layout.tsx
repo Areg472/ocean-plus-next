@@ -10,7 +10,7 @@ const raleway = Raleway({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = createMetadata({});
+export const metadata: Metadata = createMetadata({ image: "/logo.jpg" });
 
 const HEAP_ID = process.env.NEXT_PRIVATE_HEAP_ID ?? null;
 const IS_PRODUCTION = process.env.NODE_ENV === "production";

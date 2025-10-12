@@ -7,11 +7,18 @@ import { Footer } from "@/components/footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Ocean+ - Home";
-  const description = `The place to watch all of your favorite Vyond content, anywhere, anytime for free!`;
+  const description = ``;
   const pathname = `/`;
 
   return createMetadata({ title, description, pathname });
 }
+
+export const metadata: Metadata = createMetadata({
+  title: "Ocean+ - Home",
+  description:
+    "The place to watch all of your favorite Vyond content, anywhere, anytime for free!",
+  pathname: "/",
+});
 
 export default function Home() {
   return (

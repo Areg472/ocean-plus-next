@@ -11,6 +11,12 @@ export async function generateMetadata(): Promise<Metadata> {
   return createMetadata({ title, description, pathname });
 }
 
+export const metadata: Metadata = createMetadata({
+  title: "Ocean+ - Privacy Policy",
+  description: "The Ocean+ privacy policy page!",
+  pathname: "/privacy-policy",
+});
+
 export default function PrivacyPolicy() {
   return (
     <>

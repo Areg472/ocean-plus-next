@@ -3,13 +3,11 @@ import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import MoviesHomepage from "@/components/MoviesHomepage";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ocean+ - Movies";
-  const description = `The Ocean+ movies page!`;
-  const pathname = `/s/movies`;
-
-  return createMetadata({ title, description, pathname });
-}
+export const metadata: Metadata = createMetadata({
+  title: "Ocean+ - Movies",
+  description: "The Ocean+ movies page!",
+  pathname: "/s/movies",
+});
 
 export default function Movies() {
   return <MoviesHomepage />;

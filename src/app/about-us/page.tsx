@@ -28,13 +28,11 @@ import { GlitchText } from "@/components/glitch";
 import "./aboutus.css";
 import { Navbar } from "@/components/navbar";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ocean+ - About Us";
-  const description = `The Ocean+ about page!`;
-  const pathname = `/about-us`;
-
-  return createMetadata({ title, description, pathname });
-}
+export const metadata: Metadata = createMetadata({
+  title: "Ocean+ - About Us",
+  description: "The Ocean+ about page!",
+  pathname: "/about-us",
+});
 
 export default function AboutUsPage() {
   return (
