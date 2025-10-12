@@ -3,14 +3,6 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ocean+ - Privacy Policy";
-  const description = `The Ocean+ privacy policy page!`;
-  const pathname = `/privacy-policy`;
-
-  return createMetadata({ title, description, pathname });
-}
-
 export const metadata: Metadata = createMetadata({
   title: "Ocean+ - Privacy Policy",
   description: "The Ocean+ privacy policy page!",
