@@ -36,8 +36,15 @@ export default function ContactUsPage() {
     e.currentTarget.submit();
   };
 
-  const formID = process.env.PUBLIC_FORM_ID;
-  const CFSiteKey = process.env.PUBLIC_CF_TURNSTILE_SITE_KEY;
+  const formID = process.env.NEXT_PUBLIC_FORM_ID;
+  const CFSiteKey = process.env.NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY;
+
+  if (!CFSiteKey) {
+    console.error("Missing PUBLIC_CF_TURNSTILE_SITE_KEY environment variable");
+  }
+  if (!formID) {
+    console.error("Missing PUBLIC_FORM_ID environment variable");
+  }
 
   return (
     <>
