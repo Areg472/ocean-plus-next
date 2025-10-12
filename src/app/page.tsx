@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <div className="Headings text-center flex-1 flex flex-col justify-center">
+      <div className="Headings text-center flex-1 flex flex-col justify-center mb-6">
         <h1 className="mb-4 leading-normal">
           Vyond movies
           <span className="block md:inline md:whitespace-normal whitespace-nowrap">
