@@ -10,12 +10,12 @@ const items = [
   ...movies.map((movie) => ({
     title: movie.title,
     type: "movie",
-    route: `/movies/${movie.id}`,
+    route: `/s/movies/${movie.id}`,
   })),
   ...shorts.map((short) => ({
     title: short.title,
     type: "short",
-    route: `/shorts/${short.id}`,
+    route: `/s/shorts/${short.id}`,
   })),
 ];
 
