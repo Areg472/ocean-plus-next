@@ -17,7 +17,7 @@ export default function Movies() {
       <div className="flex w-full justify-center mb-12">
         <Link
           href="/s/movies/movie-ratings"
-          className="mt-10 inline-flex w-56 h-[30px] cursor-pointer items-center justify-center border border-black bg-black rounded-[20px] text-center transition duration-[400ms] px-4 py-0 hover:shadow-[10px_10px_20px_rgba(36,36,36,0.5)]"
+          className="mt-10 inline-flex w-52 h-[30px] cursor-pointer items-center justify-center border border-black bg-black rounded-[20px] text-center transition duration-[400ms] px-4 py-0 hover:shadow-[10px_10px_20px_rgba(36,36,36,0.5)]"
         >
           Movie age ratings
         </Link>
