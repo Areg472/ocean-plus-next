@@ -87,7 +87,7 @@ export default function MoviesHomepage() {
   return (
     <>
       <div className="Headings text-center mt-16 mb-12">
-        <h1 className="mt-6 mb-4 leading-normal">Movies and shows!</h1>
+        <h1 className="mt-6 mb-4 leading-normal">Movies & shows!</h1>
 
         <div className="mt-2 mb-2 flex justify-center w-full px-4">
           <div className="w-full max-w-xl">
@@ -109,7 +109,7 @@ export default function MoviesHomepage() {
 
         <div className="flex w-full justify-center">
           <Link href="/s/movies/movie-ratings">
-            <button className="button mt-10 w-56 h-[30px] cursor-pointer justify-center">
+            <button className="button mt-10 w-56 h-[30px] cursor-pointer justify-center border border-black bg-black rounded-[20px] text-center transition duration-[400ms] px-4 py-0 hover:shadow-[10px_10px_20px_rgba(36,36,36,0.5)]">
               Movie age ratings
             </button>
           </Link>
