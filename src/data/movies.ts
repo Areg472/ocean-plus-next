@@ -6,8 +6,6 @@ export interface Movie {
   genres: string;
   movieLink?: string;
   movieLink_2?: string;
-  url: string;
-  functionName: string;
 }
 
 export const movies: Movie[] = [
@@ -18,8 +16,6 @@ export const movies: Movie[] = [
     creator: "JoJuan Johnson",
     genres: "Action/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ANDREW_OROZCO_1,
-    url: "/Andrew-orozco-the-movie",
-    functionName: "AndrewOrozco1",
   },
   {
     id: "andrew-orozco-the-sequel",
@@ -28,8 +24,6 @@ export const movies: Movie[] = [
     creator: "JoJuan Johnson",
     genres: "Action/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ANDREW_OROZCO_2,
-    url: "/Andrew-orozco-the-sequel",
-    functionName: "AndrewOrozco2",
   },
   {
     id: "andrew-orozco-3-summers-here",
@@ -38,8 +32,6 @@ export const movies: Movie[] = [
     creator: "JoJuan Johnson",
     genres: "Action/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ANDREW_OROZCO_3,
-    url: "/Andrew-orozco-3-summers-here",
-    functionName: "AndrewOrozco3",
   },
   {
     id: "caillou-the-movie",
@@ -48,8 +40,6 @@ export const movies: Movie[] = [
     creator: "Anti-Animations",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU,
-    url: "/Caillou-the-movie",
-    functionName: "Cailloumovie",
   },
   {
     id: "caillou-across-the-caillouverse",
@@ -58,8 +48,6 @@ export const movies: Movie[] = [
     creator: "Akula BO",
     genres: "Adventure/Action/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU_ACROSS,
-    url: "/Caillou-across-the-caillouverse",
-    functionName: "CaillouAcross",
   },
   {
     id: "caillou-into-the-caillouverse",
@@ -68,8 +56,6 @@ export const movies: Movie[] = [
     creator: "Akula BO",
     genres: "Adventure/Action/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU_INTO,
-    url: "/Caillou-into-the-caillouverse",
-    functionName: "CaillouInto",
   },
   {
     id: "cftwcftl-the-movie-123",
@@ -78,8 +64,6 @@ export const movies: Movie[] = [
     creator: "Veyshal & 1Leon",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CFTWCFTL123,
-    url: "/Cftwcftl-the-movie-123",
-    functionName: "Cftwcftl123",
   },
   {
     id: "cftwcftl-the-movie-4",
@@ -88,8 +72,6 @@ export const movies: Movie[] = [
     creator: "Veyshal & 1Leon",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CFTWCFTL4,
-    url: "/Cftwcftl-the-movie-4",
-    functionName: "Cftwcftl4",
   },
   {
     id: "cftwcftl-the-movie-5",
@@ -98,8 +80,6 @@ export const movies: Movie[] = [
     creator: "Veyshal & 1Leon",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CFTWCFTL5,
-    url: "/Cftwcftl-the-movie-5",
-    functionName: "Cftwcftl5",
   },
   {
     id: "ga-bricks-the-movie",
@@ -108,8 +88,6 @@ export const movies: Movie[] = [
     creator: "JoJuanJohnson",
     genres: "Animation/Action/Thriller",
     movieLink: process.env.PUBLIC_MOVIE_LINK_GABRICKS,
-    url: "/Ga-bricks-the-movie",
-    functionName: "Gabricks",
   },
   {
     id: "goofus-and-doofus-1",
@@ -118,8 +96,6 @@ export const movies: Movie[] = [
     creator: "Veyshal & 1Leon",
     genres: "Animation/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_GOOFUS1,
-    url: "/Goofus-and-Doofus-1",
-    functionName: "Goofus1",
   },
   {
     id: "goofus-and-doofus-2",
@@ -128,8 +104,6 @@ export const movies: Movie[] = [
     creator: "Veyshal & 1Leon",
     genres: "Animation/Crossover/Fantasy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_GOOFUS2,
-    url: "/Goofus-and-Doofus-2",
-    functionName: "Goofus2",
   },
   {
     id: "the-horrid-james-movie",
@@ -138,8 +112,6 @@ export const movies: Movie[] = [
     creator: "BraxtonTheVyonder2009",
     genres: "Animation/Action/Drama/Romance",
     movieLink: process.env.PUBLIC_MOVIE_LINK_HORRIDJAMES,
-    url: "/The-Horrid-James-Movie",
-    functionName: "HorridJames",
   },
   {
     id: "i-now-pronounce-you-retro-and-ellie",
@@ -148,8 +120,6 @@ export const movies: Movie[] = [
     creator: "Retromiller1997",
     genres: "Animation/Comedy/Musical",
     movieLink: process.env.PUBLIC_MOVIE_LINK_RETRO_AND_ELLIE,
-    url: "/I-Now-Pronounce-You-Retro-And-Ellie",
-    functionName: "RetroAndEllie",
   },
   {
     id: "its-jack-paul-christmas",
@@ -158,8 +128,6 @@ export const movies: Movie[] = [
     creator: "Rosie Bros Studios",
     genres: "Animation/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JPCHRISTMAS,
-    url: "/Its-Jack-Paul-Christmas",
-    functionName: "Jpchristmas",
   },
   {
     id: "jack-paul-spooktacular",
@@ -169,8 +137,6 @@ export const movies: Movie[] = [
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JPSPOOKTACULAR,
     movieLink_2: process.env.PUBLIC_MOVIE_LINK_JPSPOOKTACULAR_3D,
-    url: "/Jack-Paul-Spooktacular",
-    functionName: "Jpspooktacular",
   },
   {
     id: "jack-paul-the-movie",
@@ -179,8 +145,6 @@ export const movies: Movie[] = [
     creator: "Rosie Bros Studios",
     genres: "Animation/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JACKPAUL,
-    url: "/Jack-Paul-The-Movie",
-    functionName: "Jackpaul",
   },
   {
     id: "little-bills-valendies-movie",
@@ -189,8 +153,6 @@ export const movies: Movie[] = [
     creator: "ClassicCaillouX645Grounded",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_LITTLEVALENDIES,
-    url: "/Little-Bills-Valendies-Movie",
-    functionName: "Littlevalendies",
   },
   {
     id: "math-warfare",
@@ -199,8 +161,6 @@ export const movies: Movie[] = [
     creator: "Xavier's GoAnimate Studios",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_MATHWARFARE,
-    url: "/Math-Warfare",
-    functionName: "Mathwarfare",
   },
   {
     id: "nightshift-survival",
@@ -209,8 +169,6 @@ export const movies: Movie[] = [
     creator: "RichsmondBlazer Studios",
     genres: "Supernatural/Horror/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_NIGHTSHIFTSURVIVAL,
-    url: "/Nightshift-Survival",
-    functionName: "Nightshiftsurvival",
   },
   {
     id: "rosie-gets-grounded-the-movie",
@@ -219,8 +177,6 @@ export const movies: Movie[] = [
     creator: "Jett Kingston",
     genres: "Crime/Comedy/Fantasy/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ROSIEGETSGROUNDED,
-    url: "/Rosie-Gets-Grounded-The-Movie",
-    functionName: "Rosiegetsgrounded",
   },
   {
     id: "the-comedy-world-movie",
@@ -229,8 +185,6 @@ export const movies: Movie[] = [
     creator: "AllenGuy23",
     genres: "Animation/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_COMEDYWORLD,
-    url: "/The-Comedy-World-Movie",
-    functionName: "Comedyworld",
   },
   {
     id: "the-surfs-and-the-peasants",
@@ -239,8 +193,6 @@ export const movies: Movie[] = [
     creator: "BraxtonTheVyonder2009",
     genres: "Historical Fiction/Adventure/Drama",
     movieLink: process.env.PUBLIC_MOVIE_LINK_SERBS,
-    url: "/The-Surfs-and-the-Peasants",
-    functionName: "Serbs",
   },
   {
     id: "the-veyshal-movie",
@@ -249,8 +201,6 @@ export const movies: Movie[] = [
     creator: "Veyshal",
     genres: "Animation/Action/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VEYSHALMOVIE,
-    url: "/The-Veyshal-Movie",
-    functionName: "Veyshalmovie",
   },
   {
     id: "the-vyond-cinema-movie",
@@ -259,8 +209,6 @@ export const movies: Movie[] = [
     creator: "AllenGuy23",
     genres: "Animation/Crime/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VYONDCINEMA,
-    url: "/The-Vyond-Cinema-Movie",
-    functionName: "Vyondcinema",
   },
   {
     id: "unhappy-25-years-little-brat",
@@ -269,8 +217,6 @@ export const movies: Movie[] = [
     creator: "ClassicCaillouX645Grounded",
     genres: "Animation/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_UNHAPPY,
-    url: "/Unhappy-25-Years-Little-Brat",
-    functionName: "Unhappy",
   },
   {
     id: "vance-productions-the-movie",
@@ -279,8 +225,14 @@ export const movies: Movie[] = [
     creator: "Ridenour Pictures",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VANCE_PROD,
-    url: "/Vance-Productions-The-Movie",
-    functionName: "VanceProd",
+  },
+  {
+    id: "vyond-the-movie",
+    title: "Vyond The Movie",
+    year: "May 12th, 2023",
+    creator: "FB3 Films",
+    genres: "Animation/Action",
+    movieLink: process.env.PUBLIC_MOVIE_LINK_VYOND_THE_MOVIE,
   },
   {
     id: "weatherstar4000video-the-movie",
@@ -289,7 +241,5 @@ export const movies: Movie[] = [
     creator: "WeatherStar4,000video",
     genres: "Action/Comedy/Drama",
     movieLink: process.env.PUBLIC_MOVIE_LINK_WEATHERSTAR,
-    url: "/Weatherstar4000video-The-Movie",
-    functionName: "Weatherstar",
   },
 ];

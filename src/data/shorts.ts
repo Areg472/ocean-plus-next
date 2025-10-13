@@ -4,8 +4,6 @@ export interface Short {
   year: string;
   creator: string;
   shortLink: string;
-  url: string;
-  functionName: string;
 }
 
 export const shorts: Short[] = [
@@ -15,8 +13,6 @@ export const shorts: Short[] = [
     year: "February 23rd, 2024",
     creator: "Carlo Bear",
     shortLink: process.env.PUBLIC_SHORT_LINK_CARLOS_BIRTHDAY_GONE_WRONG,
-    url: "/Carlos-Birthday-Gone-Wrong",
-    functionName: "Carlosbirthdaygonewrong",
   },
   {
     id: "maskmas",
@@ -24,8 +20,6 @@ export const shorts: Short[] = [
     year: "December 24th, 2023",
     creator: "Carlo Bear",
     shortLink: process.env.PUBLIC_SHORT_LINK_MASKMAS,
-    url: "/Maskmas",
-    functionName: "Maskmas",
   },
   {
     id: "new-turkey-eve",
@@ -33,8 +27,6 @@ export const shorts: Short[] = [
     year: "December 31st, 2024",
     creator: "Carlo Bear",
     shortLink: process.env.PUBLIC_SHORT_LINK_TURKEY,
-    url: "/New-Turkey-Eve",
-    functionName: "Turkey",
   },
   {
     id: "steamboat-willie",
@@ -42,8 +34,6 @@ export const shorts: Short[] = [
     year: "November 18th, 1928",
     creator: "Walt Disney Studios",
     shortLink: process.env.PUBLIC_SHORT_LINK_STEAMBOAT_WILLIE,
-    url: "/Steamboat-Willie",
-    functionName: "Steamboatwillie",
   },
   {
     id: "the-random-green-blah-blah-thing",
@@ -51,7 +41,5 @@ export const shorts: Short[] = [
     year: "March 17th, 2025",
     creator: "Carlo Bear",
     shortLink: process.env.PUBLIC_SHORT_LINK_BLA_BLA,
-    url: "/The-Random-Green-Blah-Blah-Thing",
-    functionName: "BlaBla",
   },
 ];

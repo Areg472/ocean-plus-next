@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://new.oceanbluestream.com";
+export const SITE_URL = "https://oceanbluestream.com";
 const DEFAULT_IMAGE = "/logo.jpg";
 
 type CreateMetaOpts = {
