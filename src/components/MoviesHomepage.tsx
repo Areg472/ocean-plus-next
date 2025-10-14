@@ -86,14 +86,7 @@ export default function MoviesHomepage() {
   return (
     <>
       <div className="Headings text-center mt-16">
-        <h1 className="mt-6 mb-4 leading-normal">Movies & shows!</h1>
-
-        <div className="mt-2 mb-2 flex justify-center w-full px-4">
-          <div className="w-full max-w-xl">
-            <SearchPage />
-          </div>
-        </div>
-
+        <MoviesHeading />
         <CarouselSection
           title="Most Popular"
           images={popularMovies}
@@ -105,6 +98,20 @@ export default function MoviesHomepage() {
           images={adventureMovies}
           delay={7000}
         />
+      </div>
+    </>
+  );
+}
+
+function MoviesHeading() {
+  return (
+    <>
+      <h1 className="mt-6 mb-4 leading-normal">Movies & shows!</h1>
+
+      <div className="mt-2 mb-2 flex justify-center w-full px-4">
+        <div className="w-full max-w-xl">
+          <SearchPage />
+        </div>
       </div>
     </>
   );

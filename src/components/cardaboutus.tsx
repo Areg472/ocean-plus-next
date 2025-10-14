@@ -2,22 +2,23 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-const Cardamon = React.forwardRef<
+const Cardaboutus = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { color?: string }
+>(({ className, color, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-xl border border-gray-200 bg-white text-gray-950 shadow-sm dark:border-gray-800 dark:bg-purple-700 dark:text-gray-50",
+      "rounded-xl border border-gray-200 bg-white text-gray-950 shadow-sm dark:border-gray-800 dark:text-gray-50",
+      color,
       className,
     )}
     {...props}
   />
 ));
-Cardamon.displayName = "Card";
+Cardaboutus.displayName = "Card";
 
-const CardamonHeader = React.forwardRef<
+const CardaboutusHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -27,9 +28,9 @@ const CardamonHeader = React.forwardRef<
     {...props}
   />
 ));
-CardamonHeader.displayName = "CardHeader";
+CardaboutusHeader.displayName = "CardHeader";
 
-const CardamonTitle = React.forwardRef<
+const CardaboutusTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
@@ -39,9 +40,9 @@ const CardamonTitle = React.forwardRef<
     {...props}
   />
 ));
-CardamonTitle.displayName = "CardTitle";
+CardaboutusTitle.displayName = "CardTitle";
 
-const CardamonDescription = React.forwardRef<
+const CardaboutusDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
@@ -51,17 +52,17 @@ const CardamonDescription = React.forwardRef<
     {...props}
   />
 ));
-CardamonDescription.displayName = "CardDescription";
+CardaboutusDescription.displayName = "CardDescription";
 
-const CardamonContent = React.forwardRef<
+const CardaboutusContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ));
-CardamonContent.displayName = "CardContent";
+CardaboutusContent.displayName = "CardContent";
 
-const CardamonFooter = React.forwardRef<
+const CardaboususFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -71,13 +72,13 @@ const CardamonFooter = React.forwardRef<
     {...props}
   />
 ));
-CardamonFooter.displayName = "CardFooter";
+CardaboususFooter.displayName = "CardFooter";
 
 export {
-  Cardamon,
-  CardamonHeader,
-  CardamonFooter,
-  CardamonTitle,
-  CardamonDescription,
-  CardamonContent,
+  Cardaboutus,
+  CardaboutusHeader,
+  CardaboususFooter,
+  CardaboutusTitle,
+  CardaboutusDescription,
+  CardaboutusContent,
 };
