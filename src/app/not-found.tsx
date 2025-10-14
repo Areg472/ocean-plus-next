@@ -1,6 +1,37 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { movies } from "@/data/movies";
+import { shorts } from "@/data/shorts";
+
 export default function NotFound() {
+  const router = useRouter();
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+
+  const pages = [
+    "/",
+    "/about-us",
+    "/contact-us",
+    "/privacy-policy",
+    "/s/movies",
+    "/s/movies/movie-ratings",
+    ...movies.map((m) => `/s/movies/${m.id}`),
+    ...shorts.map((s) => `/s/shorts/${s.id}`),
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPageIndex((prev) => (prev + 1) % pages.length);
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, [pages.length]);
+
+  const handleClick = () => {
+    router.push(pages[currentPageIndex]);
+  };
+
   return (
     <div className="h-screen w-full flex items-center justify-center font-sans bg-black text-white relative">
       <style jsx global>{`
@@ -16,6 +47,12 @@ export default function NotFound() {
           <h2 className="text-sm font-normal m-0 p-0">
             This page could not be found.
           </h2>
+          <button
+            onClick={handleClick}
+            className="mt-4 px-4 py-2 bg-white text-black rounded cursor-pointer hover:bg-gray-200 transition-colors"
+          >
+            Go somewhere lol
+          </button>
         </div>
       </div>
     </div>
