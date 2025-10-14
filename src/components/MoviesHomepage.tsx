@@ -4,17 +4,17 @@ import React from "react";
 import "./movies.css";
 import SearchPage from "@/components/SearchPage";
 import CarouselSection from "@/components/carousel";
-import mathWarfare from "../../public/MovieImages/math-warfare.png";
-import veyshalMovie from "../../public/MovieImages/veyshal-movie.png";
-import blahBlah from "../../public/MovieImages/blah-blah.jpg";
-import comedyWorld from "../../public/MovieImages/comedy-world-the-movie.png";
-import caillouMovie from "../../public/MovieImages/caillou-the-movie.png";
-import littleBill from "../../public/MovieImages/little-bill.png";
-import goofusDoofus from "../../public/MovieImages/goofus-doofus.png";
-import jpXmas from "../../public/MovieImages/jp-xmas.png";
-import cft4 from "../../public/MovieImages/cft-4.png";
-import goofusDoofus2 from "../../public/MovieImages/goofus-doofus-2.png";
-import jpSpooky from "../../public/MovieImages/jp-spooky.png";
+import mathWarfare from "../../public/ContentImages/math-warfare.png";
+import veyshalMovie from "../../public/ContentImages/veyshal-movie.png";
+import blahBlah from "../../public/ContentImages/blah-blah.jpg";
+import comedyWorld from "../../public/ContentImages/comedy-world-the-movie.png";
+import caillouMovie from "../../public/ContentImages/caillou-the-movie.png";
+import littleBill from "../../public/ContentImages/little-bill.png";
+import goofusDoofus from "../../public/ContentImages/goofus-doofus.png";
+import jpXmas from "../../public/ContentImages/jp-xmas.png";
+import cft4 from "../../public/ContentImages/cft-4.png";
+import goofusDoofus2 from "../../public/ContentImages/goofus-doofus-2.png";
+import jpSpooky from "../../public/ContentImages/jp-spooky.png";
 
 export default function MoviesHomepage() {
   const popularMovies = [
