@@ -33,14 +33,14 @@ export default function NotFound() {
   };
 
   return (
-    <div className="h-screen w-full flex items-center justify-center font-sans bg-black text-white relative">
+    <div className="h-screen w-full flex items-center justify-center font-sans bg-black text-white relative px-4">
       <style jsx global>{`
         body {
           background: black none !important;
         }
       `}</style>
-      <div className="flex items-center">
-        <h1 className="text-2xl font-normal pr-6 mr-6 border-r border-gray-700">
+      <div className="flex flex-col md:flex-row items-center">
+        <h1 className="text-2xl font-normal md:pr-6 md:mr-6 md:border-r border-gray-700 mb-4 md:mb-0">
           404
         </h1>
         <div className="flex flex-col">
