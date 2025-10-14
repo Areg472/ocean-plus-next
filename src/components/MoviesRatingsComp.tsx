@@ -27,8 +27,7 @@ import xIcon from "../../public/xicon.png";
 export default function MoviesRatingsComp() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/*<Navbar />*/}
-      <main className="my-8 flex flex-grow items-center justify-center">
+      <div className="my-8 flex flex-grow items-center justify-center">
         <div className="dark">
           <Card className="w-[320px] lg:w-[442px]">
             <CardHeader>
@@ -83,8 +82,7 @@ export default function MoviesRatingsComp() {
             </CardFooter>
           </Card>
         </div>
-      </main>
-      {/*<Footer />*/}
+      </div>
     </div>
   );
 }
