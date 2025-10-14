@@ -4,6 +4,7 @@ export interface Movie {
   year: string;
   creator: string;
   genres: string;
+  image?: string;
   movieLink?: string;
   movieLink_2?: string;
 }
@@ -15,6 +16,7 @@ export const movies: Movie[] = [
     year: "January 19th, 2018",
     creator: "JoJuan Johnson",
     genres: "Action/Adventure/Comedy",
+    image: "/ContentImages/andrew-orozko-1.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ANDREW_OROZCO_1,
   },
   {
@@ -23,6 +25,7 @@ export const movies: Movie[] = [
     year: "January 4th, 2019",
     creator: "JoJuan Johnson",
     genres: "Action/Adventure/Comedy",
+    image: "/ContentImages/andrew-orozko-2.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ANDREW_OROZCO_2,
   },
   {
@@ -31,6 +34,7 @@ export const movies: Movie[] = [
     year: "July 3rd, 2020",
     creator: "JoJuan Johnson",
     genres: "Action/Adventure/Comedy",
+    image: "/ContentImages/andrew-orozko-3.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ANDREW_OROZCO_3,
   },
   {
@@ -39,6 +43,7 @@ export const movies: Movie[] = [
     year: "October 2nd, 2022",
     creator: "Anti-Animations",
     genres: "Animation/Action/Adventure",
+    image: "/ContentImages/caillou-the-movie.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU,
   },
   {
@@ -47,6 +52,7 @@ export const movies: Movie[] = [
     year: "January 13 2025",
     creator: "Akula BO",
     genres: "Adventure/Action/Comedy",
+    image: "/ContentImages/caillou-across-caillouverse.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU_ACROSS,
   },
   {
@@ -55,6 +61,7 @@ export const movies: Movie[] = [
     year: "December 2, 2023",
     creator: "Akula BO",
     genres: "Adventure/Action/Comedy",
+    image: "/ContentImages/caillou-into-caillouverse.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU_INTO,
   },
   {
@@ -71,6 +78,7 @@ export const movies: Movie[] = [
     year: "August 24th, 2022",
     creator: "Veyshal & 1Leon",
     genres: "Animation/Action/Adventure",
+    image: "/ContentImages/cft-4.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_CFTWCFTL4,
   },
   {
@@ -87,6 +95,7 @@ export const movies: Movie[] = [
     year: "April 1st, 2022",
     creator: "JoJuanJohnson",
     genres: "Animation/Action/Thriller",
+    image: "/ContentImages/ga-bricks.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_GABRICKS,
   },
   {
@@ -95,6 +104,7 @@ export const movies: Movie[] = [
     year: "March 2nd, 2023",
     creator: "Veyshal & 1Leon",
     genres: "Animation/Adventure/Comedy",
+    image: "/ContentImages/goofus-doofus.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_GOOFUS1,
   },
   {
@@ -103,6 +113,7 @@ export const movies: Movie[] = [
     year: "August 3, 2023",
     creator: "Veyshal & 1Leon",
     genres: "Animation/Crossover/Fantasy",
+    image: "/ContentImages/goofus-doofus-2.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_GOOFUS2,
   },
   {
@@ -111,6 +122,7 @@ export const movies: Movie[] = [
     year: "May 9th, 2025",
     creator: "BraxtonTheVyonder2009",
     genres: "Animation/Action/Drama/Romance",
+    image: "/ContentImages/horridjames.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_HORRIDJAMES,
   },
   {
@@ -127,6 +139,7 @@ export const movies: Movie[] = [
     year: "December 14th, 2022",
     creator: "Rosie Bros Studios",
     genres: "Animation/Adventure/Comedy",
+    image: "/ContentImages/jp-xmas.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JPCHRISTMAS,
   },
   {
@@ -135,6 +148,7 @@ export const movies: Movie[] = [
     year: "October 21st, 2023",
     creator: "Rosie Bros Studios",
     genres: "Animation/Action/Adventure",
+    image: "/ContentImages/jp-spooky.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JPSPOOKTACULAR,
     movieLink_2: process.env.PUBLIC_MOVIE_LINK_JPSPOOKTACULAR_3D,
   },
@@ -144,6 +158,7 @@ export const movies: Movie[] = [
     year: "August 5th, 2022",
     creator: "Rosie Bros Studios",
     genres: "Animation/Adventure/Comedy",
+    image: "/ContentImages/jp-movie.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JACKPAUL,
   },
   {
@@ -152,6 +167,7 @@ export const movies: Movie[] = [
     year: "August 27th, 2022",
     creator: "ClassicCaillouX645Grounded",
     genres: "Animation/Action/Adventure",
+    image: "/ContentImages/little-bill.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_LITTLEVALENDIES,
   },
   {
@@ -160,6 +176,7 @@ export const movies: Movie[] = [
     year: "December 12th, 2024",
     creator: "Xavier's GoAnimate Studios",
     genres: "Animation/Action/Adventure",
+    image: "/ContentImages/math-warfare.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_MATHWARFARE,
   },
   {
@@ -168,6 +185,7 @@ export const movies: Movie[] = [
     year: "December 21st, 2023",
     creator: "RichsmondBlazer Studios",
     genres: "Supernatural/Horror/Adventure",
+    image: "/ContentImages/nightshift.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_NIGHTSHIFTSURVIVAL,
   },
   {
@@ -176,6 +194,7 @@ export const movies: Movie[] = [
     year: "January 23, 2024",
     creator: "Jett Kingston",
     genres: "Crime/Comedy/Fantasy/Adventure",
+    image: "/ContentImages/rosie-grounded.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_ROSIEGETSGROUNDED,
   },
   {
@@ -184,6 +203,7 @@ export const movies: Movie[] = [
     year: "January 20th, 2023",
     creator: "AllenGuy23",
     genres: "Animation/Adventure/Comedy",
+    image: "/ContentImages/comedy-world-the-movie.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_COMEDYWORLD,
   },
   {
@@ -192,6 +212,7 @@ export const movies: Movie[] = [
     year: "August 23rd, 2024",
     creator: "BraxtonTheVyonder2009",
     genres: "Historical Fiction/Adventure/Drama",
+    image: "/ContentImages/surfs.jpg",
     movieLink: process.env.PUBLIC_MOVIE_LINK_SERBS,
   },
   {
@@ -200,6 +221,7 @@ export const movies: Movie[] = [
     year: "December 25th, 2024",
     creator: "Veyshal",
     genres: "Animation/Action/Comedy",
+    image: "/ContentImages/veyshal-movie.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VEYSHALMOVIE,
   },
   {
@@ -208,6 +230,7 @@ export const movies: Movie[] = [
     year: "July 22, 2023",
     creator: "AllenGuy23",
     genres: "Animation/Crime/Adventure",
+    image: "/ContentImages/vyond-cinema-movie.png",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VYONDCINEMA,
   },
   {
@@ -217,6 +240,7 @@ export const movies: Movie[] = [
     creator: "ClassicCaillouX645Grounded",
     genres: "Animation/Adventure/Comedy",
     movieLink: process.env.PUBLIC_MOVIE_LINK_UNHAPPY,
+    image: "/ContentImages/unhappy-brat.jpg",
   },
   {
     id: "vance-productions-the-movie",
@@ -225,6 +249,7 @@ export const movies: Movie[] = [
     creator: "Ridenour Pictures",
     genres: "Animation/Action/Adventure",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VANCE_PROD,
+    image: "/ContentImages/vance-prod.jpg",
   },
   {
     id: "vyond-the-movie",
@@ -233,6 +258,7 @@ export const movies: Movie[] = [
     creator: "FB3 Films",
     genres: "Animation/Action",
     movieLink: process.env.PUBLIC_MOVIE_LINK_VYOND_THE_MOVIE,
+    image: "/ContentImages/vyond-the-movie.jpg",
   },
   {
     id: "weatherstar4000video-the-movie",
@@ -241,5 +267,6 @@ export const movies: Movie[] = [
     creator: "WeatherStar4,000video",
     genres: "Action/Comedy/Drama",
     movieLink: process.env.PUBLIC_MOVIE_LINK_WEATHERSTAR,
+    image: "/ContentImages/weather-star.jpg",
   },
 ];

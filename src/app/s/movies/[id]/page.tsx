@@ -31,8 +31,9 @@ export async function generateMetadata({
   const title = `Ocean+ - ${movie.title}`;
   const description = `Watch ${movie.title} on Ocean+ for free!`;
   const pathname = `/s/movies/${movie.id}`;
+  const image = movie.image ?? "/logo.jpg";
 
-  return createMetadata({ title, description, pathname });
+  return createMetadata({ title, description, pathname, image });
 }
 
 export default async function Page({ params }: Props) {
