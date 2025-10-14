@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import { movies } from "@/data/movies";
 import { shorts } from "@/data/shorts";
 
+interface HotjarWindow extends Window {
+  hj?: (command: string, ...args: unknown[]) => void;
+}
+
 export default function NotFound() {
   const router = useRouter();
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
@@ -19,6 +23,15 @@ export default function NotFound() {
     ...movies.map((m) => `/s/movies/${m.id}`),
     ...shorts.map((s) => `/s/shorts/${s.id}`),
   ];
+
+  useEffect(() => {
+    const hotjarWindow = window as HotjarWindow;
+    if (typeof window !== "undefined" && hotjarWindow.hj) {
+      hotjarWindow.hj("stateChange", "/404-blocked");
+      const surveys = document.querySelectorAll('[id^="hotjar-"]');
+      surveys.forEach((survey) => survey.remove());
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
