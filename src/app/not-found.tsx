@@ -43,13 +43,13 @@ export default function NotFound() {
         <h1 className="text-2xl font-normal pr-6 mr-6 border-r border-gray-700">
           404
         </h1>
-        <div>
-          <h2 className="text-sm font-normal m-0 p-0">
+        <div className="flex flex-col">
+          <h2 className="text-sm m-0 p-0 whitespace-nowrap">
             This page could not be found.
           </h2>
           <button
             onClick={handleClick}
-            className="mt-4 px-4 py-2 bg-white text-black rounded cursor-pointer hover:bg-gray-200 transition-colors"
+            className="mt-4 w-full px-0 py-2 bg-white text-black text-sm rounded cursor-pointer hover:bg-gray-200 transition-colors"
           >
             Go somewhere lol
           </button>
