@@ -1,5 +1,3 @@
-"use client";
-
 import "./moviepage.css";
 import SearchPage from "@/components/SearchPage";
 import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
