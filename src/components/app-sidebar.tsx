@@ -53,7 +53,7 @@ const header = [
   },
   {
     title: "Movies",
-    url: "/s/movies",
+    url: "/movies",
     icon: Film,
   },
   {
@@ -173,7 +173,7 @@ export function AppSidebar() {
                 >
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href={`/s/movies/${item.url}`}>
+                      <Link href={`/movies/${item.url}`}>
                         <item.icon />
                         <span>{item.title}</span>
                       </Link>
@@ -202,7 +202,7 @@ export function AppSidebar() {
                 >
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href={`/s/shorts/${shortItem.url}`}>
+                      <Link href={`/shorts/${shortItem.url}`}>
                         <shortItem.icon />
                         <span>{shortItem.title}</span>
                       </Link>

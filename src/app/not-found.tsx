@@ -18,8 +18,8 @@ export default function NotFound() {
     "/about-us",
     "/contact-us",
     "/privacy-policy",
-    "/s/movies",
-    "/s/movies/movie-ratings",
+    "/movies",
+    "/movies/movie-ratings",
     ...movies.map((m) => `/s/movies/${m.id}`),
     ...shorts.map((s) => `/s/shorts/${s.id}`),
   ];

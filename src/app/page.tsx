@@ -27,7 +27,7 @@ export default function Home() {
           Anywhere, anytime, for free, no restrictions.
         </h2>
         <div className="flex flex-col items-center justify-center space-y-3 md:flex-row md:space-y-0 md:space-x-3">
-          <Link href="/s/movies">
+          <Link href="/movies">
             <input
               className="oplusbuttons text-white cursor-pointer mt-4 rounded-full bg-blue-400 px-4 py-2 leading-loose"
               type="button"

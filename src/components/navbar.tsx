@@ -13,7 +13,7 @@ export function Navbar() {
             <Image src={oplussvg} className="actualimage" alt="logo" />
           </div>
         </Link>
-        <Link href="/s/movies">
+        <Link href="/movies">
           <button className="button cursor-pointer leading-loose">
             Movies
           </button>
