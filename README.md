@@ -29,7 +29,7 @@ next start
 ```
 
 And Ocean+ is good to go locally, self-hosted!
-If you're willing to set up your analytics scripts, edit the root index.html file.
+If you're willing to set up your analytics scripts, edit app/layout.tsx file.
 
 ## Made with
 
