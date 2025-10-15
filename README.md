@@ -33,4 +33,4 @@ If you're willing to set up your analytics scripts, edit app/layout.tsx file.
 
 ## Made with
 
-[![My Skills](https://skillicons.dev/icons?i=github,git,npm,typescript,react,next,tailwind,webstorm,pycharm,vercel,discord,workers&perline=6)](https://vercel.com/)
+[![My Skills](https://skillicons.dev/icons?i=github,git,npm,typescript,react,next,tailwind,webstorm,pycharm,vercel,discord&perline=6)](https://vercel.com/)
