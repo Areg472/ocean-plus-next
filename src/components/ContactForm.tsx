@@ -1,5 +1,6 @@
 "use client";
 
+import Form from "next/form";
 import Turnstile, { useTurnstile } from "react-turnstile";
 import { useLogger } from "@logtail/next";
 import "./contactus.css";
@@ -51,7 +52,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <form
+      <Form
         onSubmit={handleSubmit}
         action={`https://submit-form.com/${formID}`}
         className="form"
@@ -107,9 +108,9 @@ export default function ContactForm() {
           }}
         />
         <button type="submit" className="submit cursor-pointer">
-          Send
+          Submit
         </button>
-      </form>
+      </Form>
     </>
   );
 }
