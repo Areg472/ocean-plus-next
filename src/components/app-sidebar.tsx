@@ -11,6 +11,7 @@ import {
   Video,
   Clapperboard,
   SquareCode,
+  HandCoins,
   Star,
 } from "lucide-react";
 import { motion } from "motion/react";
@@ -65,6 +66,11 @@ const header = [
     title: "About Us",
     url: "/about-us",
     icon: SquareCode,
+  },
+  {
+    title: "Support Us",
+    url: "https://link.oceanbluestream.com/patreon",
+    icon: HandCoins,
   },
 ];
 
