@@ -119,7 +119,10 @@ export function AppSidebar() {
             <motion.div key={header.title} whileHover={{ scale: 1.05 }}>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link href={header.url}>
+                  <Link
+                    href={header.url}
+                    target={header.url.startsWith("http") ? "_blank" : ""}
+                  >
                     <header.icon />
                     <span>{header.title}</span>
                   </Link>

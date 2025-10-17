@@ -34,7 +34,7 @@ export function Navbar() {
             </button>
           </Link>
         </div>
-        <Link href={"https://link.oceanbluestream.com/patreon"}>
+        <Link href={"https://link.oceanbluestream.com/patreon"} target="_blank">
           <button className="mt-2.5 h-[30px] w-[150px] flex-[100%] cursor-pointer rounded-[20px] border border-black bg-black text-center leading-loose transition-all duration-400 hover:shadow-[10px_10px_20px_rgba(36,36,36,0.5)] md:mr-2.5 md:flex-[25%] xl:mr-5">
             Support Us
           </button>
