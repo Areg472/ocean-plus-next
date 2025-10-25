@@ -153,7 +153,7 @@ export function AppSidebar() {
                 >
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href={`/s/shorts/${originals.url}`}>
+                      <Link href={`/shorts/${originals.url}`}>
                         <originals.icon />
                         <span>{originals.title}</span>
                       </Link>
