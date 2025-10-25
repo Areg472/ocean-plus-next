@@ -20,8 +20,8 @@ export default function NotFound() {
     "/privacy-policy",
     "/movies",
     "/movies/movie-ratings",
-    ...movies.map((m) => `/s/movies/${m.id}`),
-    ...shorts.map((s) => `/s/shorts/${s.id}`),
+    ...movies.map((m) => `/movies/${m.id}`),
+    ...shorts.map((s) => `/shorts/${s.id}`),
   ];
 
   useEffect(() => {
