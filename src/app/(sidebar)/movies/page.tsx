@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = createMetadata({
   title: "Ocean+ - Movies",
-  description: "The Ocean+ movies page!",
+  description:
+    "The Ocean+ movies and shorts page. Watch free Vyond and GoAnimate movies and shorts anywhere at anytime!",
   pathname: "/s/movies",
 });
 

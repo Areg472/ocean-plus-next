@@ -29,7 +29,7 @@ export async function generateMetadata({
   }
 
   const title = `Ocean+ - ${movie.title}`;
-  const description = `Watch ${movie.title} on Ocean+ for free!`;
+  const description = `Watch ${movie.title} on Ocean+ for free! Vyond shorts anywhere, at anytime!`;
   const pathname = `/s/movies/${movie.id}`;
   const image = movie.image ?? "/logo.jpg";
 
