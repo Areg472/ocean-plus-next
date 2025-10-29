@@ -5,7 +5,7 @@ import MoviesHomepage from "@/components/MoviesHomepage";
 import Link from "next/link";
 
 export const metadata: Metadata = createMetadata({
-  title: "Ocean+ - Movies",
+  title: "Ocean+ - Movies - Free Vyond and GoAnimate movies!",
   description:
     "The Ocean+ movies and shorts page. Watch free Vyond and GoAnimate movies and shorts anywhere at anytime!",
   pathname: "/s/movies",

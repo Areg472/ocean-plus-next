@@ -6,7 +6,7 @@ import "./homepage.css";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = createMetadata({
-  title: "Ocean+ - Home - Vyond movies and shows",
+  title: "Ocean+ - Home - Vyond movies and shorts",
   description:
     "The place to watch all of your favorite Vyond and GoAnimate content, anywhere, anytime for free!",
   pathname: "/",
