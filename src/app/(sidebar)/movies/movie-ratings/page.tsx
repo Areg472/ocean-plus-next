@@ -13,7 +13,7 @@ import RatingsCarousel from "@/components/RatingsCarousel";
 export const metadata: Metadata = createMetadata({
   title: "Ocean+ - Movie Ratings",
   description: "The Ocean+ movie ratings page!",
-  pathname: "/s/movie-ratings",
+  pathname: "/movie-ratings",
 });
 
 export default function Movieratings() {
