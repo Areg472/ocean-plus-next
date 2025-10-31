@@ -24,13 +24,13 @@ export async function generateMetadata({
     return createMetadata({
       title: "Movie not found",
       description: "No such movie",
-      pathname: `/s/movies/${id}`,
+      pathname: `/movies/${id}`,
     });
   }
 
   const title = `Ocean+ - ${movie.title}`;
   const description = `Watch ${movie.title} on Ocean+ for free! Vyond movies anywhere, at anytime!`;
-  const pathname = `/s/movies/${movie.id}`;
+  const pathname = `/movies/${movie.id}`;
   const image = movie.image ?? "/logo.jpg";
 
   return createMetadata({ title, description, pathname, image });

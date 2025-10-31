@@ -24,13 +24,13 @@ export async function generateMetadata({
     return createMetadata({
       title: "Short not found",
       description: "No such short",
-      pathname: `/s/shorts/${id}`,
+      pathname: `/shorts/${id}`,
     });
   }
 
   const title = `Ocean+ - ${short.title}`;
   const description = `Watch ${short.title} on Ocean+ for free. Vyond shorts anywhere, at anytime!`;
-  const pathname = `/s/shorts/${short.id}`;
+  const pathname = `/shorts/${short.id}`;
   const image = short.image ?? "/logo.jpg";
 
   return createMetadata({ title, description, pathname, image });
