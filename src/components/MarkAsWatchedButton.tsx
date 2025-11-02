@@ -14,9 +14,13 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    // Check if movieId already has a prefix (short_), otherwise add movie_ prefix
+    const cookieName = movieId.startsWith("short_")
+      ? movieId
+      : `movie_${movieId}`;
     const watched = document.cookie
       .split("; ")
-      .find((row) => row.startsWith(`movie_${movieId}=`));
+      .find((row) => row.startsWith(`${cookieName}=`));
     if (watched) {
       setIsWatched(true);
     }
@@ -25,8 +29,14 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const handleMarkAsWatched = async () => {
     setIsLoading(true);
     try {
-      document.cookie = `movie_${movieId}=watched; path=/; max-age=31536000`;
+      // Check if movieId already has a prefix (short_), otherwise add movie_ prefix
+      const cookieName = movieId.startsWith("short_")
+        ? movieId
+        : `movie_${movieId}`;
+      document.cookie = `${cookieName}=watched; path=/; max-age=31536000`;
       setIsWatched(true);
+      // Notify sidebar to update
+      window.dispatchEvent(new Event("watchedStatusChanged"));
     } catch (error) {
       console.error("Error marking movie as watched:", error);
     } finally {
@@ -37,8 +47,14 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const handleUnmarkAsWatched = async () => {
     setIsLoading(true);
     try {
-      document.cookie = `movie_${movieId}=; path=/; max-age=0`;
+      // Check if movieId already has a prefix (short_), otherwise add movie_ prefix
+      const cookieName = movieId.startsWith("short_")
+        ? movieId
+        : `movie_${movieId}`;
+      document.cookie = `${cookieName}=; path=/; max-age=0`;
       setIsWatched(false);
+      // Notify sidebar to update
+      window.dispatchEvent(new Event("watchedStatusChanged"));
     } catch (error) {
       console.error("Error unmarking movie as watched:", error);
     } finally {

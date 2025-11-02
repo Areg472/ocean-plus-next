@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLogger } from "@logtail/next";
@@ -45,8 +45,39 @@ function fuzzySearch(query: string, text: string): number {
 export default function SearchPage() {
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [watchedItems, setWatchedItems] = useState<Set<string>>(new Set());
   const router = useRouter();
   const log = useLogger();
+
+  useEffect(() => {
+    const updateWatchedItems = () => {
+      const cookies = document.cookie.split("; ");
+      const watched = new Set<string>();
+
+      cookies.forEach((cookie) => {
+        const [name, value] = cookie.split("=");
+        if (value === "watched") {
+          watched.add(name);
+        }
+      });
+
+      setWatchedItems(watched);
+    };
+
+    updateWatchedItems();
+
+    window.addEventListener("watchedStatusChanged", updateWatchedItems);
+
+    return () => {
+      window.removeEventListener("watchedStatusChanged", updateWatchedItems);
+    };
+  }, []);
+
+  const isWatched = (route: string, type: string) => {
+    const id = route.split("/").pop();
+    const cookieName = type === "movie" ? `movie_${id}` : `short_${id}`;
+    return watchedItems.has(cookieName);
+  };
 
   const filtered = items
     .map((item) => ({
@@ -130,15 +161,22 @@ export default function SearchPage() {
                   <span className="font-medium text-gray-900">
                     {item.title}
                   </span>
-                  <span
-                    className={`mt-1 inline-block rounded-full px-2 py-0.5 text-xs font-semibold tracking-wide uppercase ${
-                      item.type === "movie"
-                        ? "bg-blue-100 text-blue-800"
-                        : "bg-green-100 text-green-800"
-                    }`}
-                  >
-                    {item.type}
-                  </span>
+                  <div className="mt-1 flex gap-2">
+                    <span
+                      className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold tracking-wide uppercase ${
+                        item.type === "movie"
+                          ? "bg-blue-100 text-blue-800"
+                          : "bg-green-100 text-green-800"
+                      }`}
+                    >
+                      {item.type}
+                    </span>
+                    {isWatched(item.route, item.type) && (
+                      <span className="inline-block rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold tracking-wide uppercase text-gray-800">
+                        watched
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <svg
                   className="h-4 w-4 text-gray-400"

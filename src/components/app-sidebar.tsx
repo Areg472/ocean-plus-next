@@ -27,7 +27,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { movies } from "@/data/movies";
 import { shorts } from "@/data/shorts";
@@ -110,6 +110,41 @@ const shortItems = shorts
 
 export function AppSidebar() {
   const scrollRef = useRef(null);
+  const [watchedItems, setWatchedItems] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    const updateWatchedItems = () => {
+      const cookies = document.cookie.split("; ");
+      const watched = new Set<string>();
+
+      cookies.forEach((cookie) => {
+        const [name, value] = cookie.split("=");
+        if (value === "watched") {
+          const id =
+            name.startsWith("movie_") || name.startsWith("short_")
+              ? name
+              : name;
+          watched.add(id);
+        }
+      });
+
+      setWatchedItems(watched);
+    };
+
+    updateWatchedItems();
+
+    window.addEventListener("watchedStatusChanged", updateWatchedItems);
+
+    return () => {
+      window.removeEventListener("watchedStatusChanged", updateWatchedItems);
+    };
+  }, []);
+
+  const isWatched = (id: string, type: "movie" | "short") => {
+    const cookieName = type === "movie" ? `movie_${id}` : `short_${id}`;
+    return watchedItems.has(cookieName);
+  };
+
   return (
     <Sidebar variant="sidebar">
       <SidebarHeader>
@@ -155,7 +190,15 @@ export function AppSidebar() {
                     <SidebarMenuButton asChild>
                       <Link href={`/shorts/${originals.url}`}>
                         <originals.icon />
-                        <span>{originals.title}</span>
+                        <span
+                          className={
+                            isWatched(originals.url, "short")
+                              ? "line-through"
+                              : undefined
+                          }
+                        >
+                          {originals.title}
+                        </span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -184,7 +227,15 @@ export function AppSidebar() {
                     <SidebarMenuButton asChild>
                       <Link href={`/movies/${item.url}`}>
                         <item.icon />
-                        <span>{item.title}</span>
+                        <span
+                          className={
+                            isWatched(item.url, "movie")
+                              ? "line-through"
+                              : undefined
+                          }
+                        >
+                          {item.title}
+                        </span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -213,7 +264,15 @@ export function AppSidebar() {
                     <SidebarMenuButton asChild>
                       <Link href={`/shorts/${shortItem.url}`}>
                         <shortItem.icon />
-                        <span>{shortItem.title}</span>
+                        <span
+                          className={
+                            isWatched(shortItem.url, "short")
+                              ? "line-through"
+                              : undefined
+                          }
+                        >
+                          {shortItem.title}
+                        </span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
