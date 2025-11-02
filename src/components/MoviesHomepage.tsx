@@ -21,32 +21,32 @@ export default function MoviesHomepage() {
     {
       src: mathWarfare,
       alt: "math-warfare",
-      link: "/s/movies/math-warfare",
+      link: "/movies/math-warfare",
     },
     {
       src: veyshalMovie,
       alt: "The Veyshal movie",
-      link: "/s/movies/the-veyshal-movie",
+      link: "/movies/the-veyshal-movie",
     },
     {
       src: blahBlah,
       alt: "Bla bla thing",
-      link: "/s/shorts/the-random-green-blah-blah-thing",
+      link: "/shorts/the-random-green-blah-blah-thing",
     },
     {
       src: comedyWorld,
       alt: "Comedy world",
-      link: "/s/movies/the-comedy-world-movie",
+      link: "/movies/the-comedy-world-movie",
     },
     {
       src: caillouMovie,
       alt: "caillou",
-      link: "/s/movies/caillou-the-movie",
+      link: "/movies/caillou-the-movie",
     },
     {
       src: littleBill,
       alt: "Little bill",
-      link: "/s/movies/little-bills-valendies-movie",
+      link: "/movies/little-bills-valendies-movie",
     },
   ];
 
@@ -54,32 +54,32 @@ export default function MoviesHomepage() {
     {
       src: goofusDoofus,
       alt: "goofusdoofus1",
-      link: "/s/movies/goofus-and-doofus-1",
+      link: "/movies/goofus-and-doofus-1",
     },
     {
       src: caillouMovie,
       alt: "caillou",
-      link: "/s/movies/caillou-the-movie",
+      link: "/movies/caillou-the-movie",
     },
     {
       src: jpXmas,
       alt: "jpxmas",
-      link: "/s/movies/its-jack-paul-christmas",
+      link: "/movies/its-jack-paul-christmas",
     },
     {
       src: cft4,
       alt: "cft4",
-      link: "/s/movies/cftwcftl-the-movie-4",
+      link: "/movies/cftwcftl-the-movie-4",
     },
     {
       src: goofusDoofus2,
       alt: "goofusdoofus2",
-      link: "/s/movies/goofus-and-doofus-2",
+      link: "/movies/goofus-and-doofus-2",
     },
     {
       src: jpSpooky,
       alt: "jpspooky",
-      link: "/s/movies/jack-paul-spooktacular",
+      link: "/movies/jack-paul-spooktacular",
     },
   ];
 
