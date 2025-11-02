@@ -3,7 +3,9 @@ import { shorts } from "@/data/shorts";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
-import { ShortPage } from "@/components/ShortPage";
+import SearchPage from "@/components/SearchPage";
+import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
+import "@/components/moviepage.css";
 
 export async function generateStaticParams() {
   return shorts.map((short) => ({ id: String(short.id) }));
@@ -46,22 +48,49 @@ export default async function Page({ params }: Props) {
 
   if (!short?.shortLink) {
     return (
-      <main>
-        <p>No video links available for this short.</p>
+      <main className="mt-16 mb-12">
+        <div className="px-4 md:px-6 lg:px-8">
+          <p>No video links available for this short.</p>
+        </div>
       </main>
     );
   }
 
-  const primaryLink = short.shortLink ?? "";
-
   return (
     <main className="mt-16 mb-12">
-      <ShortPage
-        title={short.title}
-        creator={short.creator}
-        shortLink={primaryLink}
-        year={short.year}
-      />
+      <div>
+        <div className="px-4 md:px-6 lg:px-8">
+          <h1
+            className="issue text-center leading-normal lg:text-left"
+            style={{
+              minWidth: short.title.length < 14 ? "13.5ch" : "auto",
+              display: "inline-block",
+            }}
+          >
+            {short.title}
+          </h1>
+          <div className="mt-2 mb-2 flex justify-center">
+            <SearchPage />
+          </div>
+          <div className="grid grid-cols-1 gap-4">
+            <div className="w-full">
+              <DynamicAccordionForMoviesAndShorts
+                year={short.year}
+                creator={short.creator}
+              />
+            </div>
+            <div className="relative pt-[56.25%]">
+              <iframe
+                src={short.shortLink}
+                loading="lazy"
+                className="absolute top-0 h-full w-full border-0"
+                allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

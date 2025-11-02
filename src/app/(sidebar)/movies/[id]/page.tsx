@@ -1,9 +1,12 @@
 import { movies } from "@/data/movies";
 import React from "react";
-import { MoviePage } from "@/components/MoviePage";
+import { MovieIframeSection } from "@/components/MovieIframeSection";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
+import SearchPage from "@/components/SearchPage";
+import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
+import "@/components/moviepage.css";
 
 export async function generateStaticParams() {
   return movies.map((movie) => ({ id: String(movie.id) }));
@@ -47,24 +50,52 @@ export default async function Page({ params }: Props) {
 
   if (!movie.movieLink && !movie.movieLink_2) {
     return (
-      <main>
-        <p>No video links available for this movie.</p>
+      <main className="mt-16 mb-12">
+        <div className="px-4 md:px-6 lg:px-8">
+          <p>No video links available for this movie.</p>
+        </div>
       </main>
     );
   }
 
-  const primaryLink = movie.movieLink ?? movie.movieLink_2 ?? "";
+  const isSpooky = movie.title === "Jack Paul Spooktacular";
 
   return (
     <main className="mt-16 mb-12">
-      <MoviePage
-        title={movie.title}
-        creator={movie.creator}
-        movieLink={primaryLink}
-        year={movie.year}
-        genres={movie.genres}
-        {...(movie.movieLink_2 ? { movieLink_2: movie.movieLink_2 } : {})}
-      />
+      <div>
+        <div className="px-4 md:px-6 lg:px-8">
+          <h1
+            className="issue text-center leading-normal lg:text-left"
+            style={{
+              minWidth: movie.title.length < 14 ? "13.5ch" : "auto",
+              display: "inline-block",
+            }}
+          >
+            {movie.title}
+          </h1>
+          <div className="mt-2 mb-2 flex justify-center">
+            <SearchPage />
+          </div>
+          <div className="grid grid-cols-1 gap-4">
+            <div className="w-full">
+              <DynamicAccordionForMoviesAndShorts
+                year={movie.year}
+                genres={movie.genres}
+                creator={movie.creator}
+              />
+            </div>
+            <div className="w-full">
+              <MovieIframeSection
+                movieLink={movie.movieLink ?? movie.movieLink_2 ?? ""}
+                isSpooky={isSpooky}
+                {...(movie.movieLink_2
+                  ? { movieLink_2: movie.movieLink_2 }
+                  : {})}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
