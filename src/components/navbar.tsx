@@ -65,7 +65,7 @@ function MobileNavbar() {
             <NavigationMenuTrigger>
               <MenuSquare />
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="!left-1/2 !-translate-x-1/2 !absolute !top-full !mt-2 bg-black rounded-md border border-gray-800 shadow-lg !w-auto z-50">
+            <NavigationMenuContent className="!left-1/2 !-translate-x-1/2 !absolute !top-full !mt-2 bg-black rounded-md border border-gray-800 shadow-lg !w-auto z-20">
               <ul className="flex flex-col w-[200px] gap-3 p-4 text-center">
                 <li>
                   <NavigationMenuLink asChild>
