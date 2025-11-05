@@ -58,29 +58,51 @@ function DesktopNavbar() {
 
 function MobileNavbar() {
   return (
-    <div className="flex justify-center mt-14">
-      <NavigationMenu>
+    <div className="flex justify-center mt-14 relative">
+      <NavigationMenu viewport={false} className="relative">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
               <MenuSquare />
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-black flex justify-center">
-              <ul className="flex flex-col w-[200px] gap-4">
+            <NavigationMenuContent className="!left-1/2 !-translate-x-1/2 !absolute !top-full !mt-2 bg-black rounded-md border border-gray-800 shadow-lg !w-auto z-50">
+              <ul className="flex flex-col w-[200px] gap-3 p-4 text-center">
                 <li>
                   <NavigationMenuLink asChild>
-                    <Link href="#" className="block">
-                      Components
+                    <Link href="/" className="block">
+                      Home
                     </Link>
                   </NavigationMenuLink>
+                </li>
+                <li>
                   <NavigationMenuLink asChild>
-                    <Link href="#" className="block">
-                      Documentation
+                    <Link href="/movies" className="block">
+                      Movies
                     </Link>
                   </NavigationMenuLink>
+                </li>
+                <li>
                   <NavigationMenuLink asChild>
-                    <Link href="#" className="block">
-                      Blocks
+                    <Link href="/contact-us" className="block">
+                      Contact Us
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link href="/about-us" className="block">
+                      About Us
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="https://link.oceanbluestream.com/patreon"
+                      target="_blank"
+                      className="block"
+                    >
+                      Support Us
                     </Link>
                   </NavigationMenuLink>
                 </li>
