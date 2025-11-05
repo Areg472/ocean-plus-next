@@ -29,8 +29,8 @@ next start
 ```
 
 And Ocean+ is good to go locally, self-hosted!
-If you're willing to set up your analytics scripts, edit app/layout.tsx file.
+If you're willing to set up your analytics scripts, edit app/layout.tsx file or add your environment variables, if you're going to use the pre configured services..
 
 ## Made with
 
-[![My Skills](https://skillicons.dev/icons?i=github,git,npm,typescript,react,next,tailwind,webstorm,pycharm,vercel,discord&perline=6)](https://vercel.com/)
+[![My Skills](https://skillicons.dev/icons?i=github,git,npm,typescript,react,next,tailwind,webstorm,vercel,discord&perline=5)](https://vercel.com/)
