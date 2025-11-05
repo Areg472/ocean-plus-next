@@ -3,6 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import oplussvg from "../../public/oplus.svg";
+import { useMediaQuery } from "react-responsive";
+import { MenuSquare } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
 
 function DesktopNavbar() {
   return (
@@ -44,12 +56,52 @@ function DesktopNavbar() {
   );
 }
 
-function MovileNavbar() {}
+function MobileNavbar() {
+  return (
+    <div className="flex justify-center mt-14">
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>
+              <MenuSquare />
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className="bg-black flex justify-center">
+              <ul className="flex flex-col w-[200px] gap-4">
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link href="#" className="block">
+                      Components
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
+                    <Link href="#" className="block">
+                      Documentation
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
+                    <Link href="#" className="block">
+                      Blocks
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+  );
+}
 
 export function Navbar() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <>
-      <DesktopNavbar />
+      {isMobile && <MobileNavbar />}
+      {isDesktopOrLaptop && <DesktopNavbar />}
     </>
   );
 }
