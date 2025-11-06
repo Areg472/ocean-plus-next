@@ -14,14 +14,11 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Check if movieId already has a prefix (short_), otherwise add movie_ prefix
-    const cookieName = movieId.startsWith("short_")
+    const storageKey = movieId.startsWith("short_")
       ? movieId
       : `movie_${movieId}`;
-    const watched = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith(`${cookieName}=`));
-    if (watched) {
+    const watched = localStorage.getItem(storageKey);
+    if (watched === "watched") {
       setIsWatched(true);
     }
   }, [movieId]);
@@ -29,13 +26,11 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const handleMarkAsWatched = async () => {
     setIsLoading(true);
     try {
-      // Check if movieId already has a prefix (short_), otherwise add movie_ prefix
-      const cookieName = movieId.startsWith("short_")
+      const storageKey = movieId.startsWith("short_")
         ? movieId
         : `movie_${movieId}`;
-      document.cookie = `${cookieName}=watched; path=/; max-age=31536000`;
+      localStorage.setItem(storageKey, "watched");
       setIsWatched(true);
-      // Notify sidebar to update
       window.dispatchEvent(new Event("watchedStatusChanged"));
     } catch (error) {
       console.error("Error marking movie as watched:", error);
@@ -47,13 +42,11 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const handleUnmarkAsWatched = async () => {
     setIsLoading(true);
     try {
-      // Check if movieId already has a prefix (short_), otherwise add movie_ prefix
-      const cookieName = movieId.startsWith("short_")
+      const storageKey = movieId.startsWith("short_")
         ? movieId
         : `movie_${movieId}`;
-      document.cookie = `${cookieName}=; path=/; max-age=0`;
+      localStorage.removeItem(storageKey);
       setIsWatched(false);
-      // Notify sidebar to update
       window.dispatchEvent(new Event("watchedStatusChanged"));
     } catch (error) {
       console.error("Error unmarking movie as watched:", error);

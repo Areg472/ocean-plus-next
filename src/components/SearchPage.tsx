@@ -51,15 +51,14 @@ export default function SearchPage() {
 
   useEffect(() => {
     const updateWatchedItems = () => {
-      const cookies = document.cookie.split("; ");
       const watched = new Set<string>();
 
-      cookies.forEach((cookie) => {
-        const [name, value] = cookie.split("=");
-        if (value === "watched") {
-          watched.add(name);
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && localStorage.getItem(key) === "watched") {
+          watched.add(key);
         }
-      });
+      }
 
       setWatchedItems(watched);
     };
