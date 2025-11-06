@@ -13,6 +13,8 @@ export interface CarouselImage {
   src: string | StaticImageData;
   alt: string;
   link: string;
+  width?: number;
+  height?: number;
 }
 
 interface CarouselSectionProps {
@@ -45,7 +47,12 @@ export default function CarouselSection({
           {images.map((image, index) => (
             <CarouselItem key={index} className="md:basis-full lg:basis-1/3">
               <Link href={image.link}>
-                <Image src={image.src} alt={image.alt} />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                />
               </Link>
             </CarouselItem>
           ))}
