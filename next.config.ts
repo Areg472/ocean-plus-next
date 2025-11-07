@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { withBetterStack } from "@logtail/next";
+import { withBotId } from "botid/next/config";
 
 const nextConfig: NextConfig = {
   images: {
@@ -13,4 +14,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withBetterStack(nextConfig);
+export default withBotId(withBetterStack(nextConfig));
