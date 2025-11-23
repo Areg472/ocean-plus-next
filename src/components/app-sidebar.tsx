@@ -40,7 +40,7 @@ const originals = shorts
     icon: Star,
   }));
 
-const items = movies.map((movie) => ({
+const items = movies.sort().map((movie) => ({
   title: movie.title,
   url: movie.id,
   icon: TvMinimalPlay,
@@ -102,6 +102,7 @@ const footer = [
 
 const shortItems = shorts
   .filter((short) => short.title !== "The Random Green Blah Blah Thing")
+  .sort()
   .map((short) => ({
     title: short.title,
     url: short.id,
