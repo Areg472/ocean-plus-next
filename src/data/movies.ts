@@ -269,4 +269,13 @@ export const movies: Movie[] = [
     movieLink: process.env.PUBLIC_MOVIE_LINK_WEATHERSTAR,
     image: "/ContentImages/weather-star.jpg",
   },
+  {
+    id: "caillou-gx-the-movie-angel-world-chapter-1",
+    title: "Caillou GX: The Movie: Angel World: Chapter 1",
+    year: "July 21st, 2024",
+    creator: "AnimeAnimationStudio",
+    movieLink: process.env.PUBLIC_MOVIE_LINK_CAILLOU_GX_ANGEL_WORLD,
+    genres: "Animation/Action/Fantasy",
+    image: "/ContentImages/caillou-gx-chapter-1.jpg",
+  },
 ];
