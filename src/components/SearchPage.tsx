@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLogger } from "@logtail/next";
@@ -7,16 +7,20 @@ import { movies } from "@/data/movies";
 import { shorts } from "@/data/shorts";
 
 const items = [
-  ...movies.map((movie) => ({
-    title: movie.title,
-    type: "movie",
-    route: `/movies/${movie.id}`,
-  })),
-  ...shorts.map((short) => ({
-    title: short.title,
-    type: "short",
-    route: `/shorts/${short.id}`,
-  })),
+  ...movies
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .map((movie) => ({
+      title: movie.title,
+      type: "movie",
+      route: `/movies/${movie.id}`,
+    })),
+  ...shorts
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .map((short) => ({
+      title: short.title,
+      type: "short",
+      route: `/shorts/${short.id}`,
+    })),
 ];
 
 function fuzzySearch(query: string, text: string): number {

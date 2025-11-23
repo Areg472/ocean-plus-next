@@ -40,11 +40,13 @@ const originals = shorts
     icon: Star,
   }));
 
-const items = movies.sort().map((movie) => ({
-  title: movie.title,
-  url: movie.id,
-  icon: TvMinimalPlay,
-}));
+const items = movies
+  .sort((a, b) => a.title.localeCompare(b.title))
+  .map((movie) => ({
+    title: movie.title,
+    url: movie.id,
+    icon: TvMinimalPlay,
+  }));
 
 const header = [
   {
@@ -102,7 +104,7 @@ const footer = [
 
 const shortItems = shorts
   .filter((short) => short.title !== "The Random Green Blah Blah Thing")
-  .sort()
+  .sort((a, b) => a.title.localeCompare(b.title))
   .map((short) => ({
     title: short.title,
     url: short.id,
