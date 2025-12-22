@@ -278,4 +278,12 @@ export const movies: Movie[] = [
     genres: "Animation/Action/Fantasy",
     image: "/ContentImages/caillou-gx-chapter-1.jpg",
   },
+  {
+    id: "jack-paul-cyber-christmas",
+    title: "Jack Paul Cyber Christmas",
+    year: "December 21st, 2025",
+    creator: "Dolphin Pictures",
+    movieLink: process.env.PUBLIC_MOVIE_LINK_JACK_PAUL_CYBER_CHRISTMAS,
+    genres: "Comedy/Sci-Fi/Adventure",
+  },
 ];
