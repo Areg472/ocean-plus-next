@@ -285,5 +285,15 @@ export const movies: Movie[] = [
     creator: "Dolphin Pictures",
     movieLink: process.env.PUBLIC_MOVIE_LINK_JACK_PAUL_CYBER_CHRISTMAS,
     genres: "Comedy/Sci-Fi/Adventure",
+    image: "/ContentImages/jp-cyber-christmas.jpg",
+  },
+  {
+    id: "buff",
+    title: "BUFF",
+    year: "January 1st, 2026",
+    creator: "Braxbo",
+    movieLink: process.env.PUBLIC_MOVIE_LINK_BUFF,
+    genres: "Animation/Action/Drama",
+    image: "/ContentImages/buff.jpg",
   },
 ];
