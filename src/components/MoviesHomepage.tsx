@@ -32,6 +32,7 @@ export default function MoviesHomepage() {
       .sort(() => Math.random() - 0.5)
       .map(([genre, genreMovies]) => ({
         genre,
+        delay: Math.floor(Math.random() * 4000) + 5000, // Random delay between 5000-9000ms
         movies: genreMovies.map((movie) => ({
           src: movie.image!,
           alt: movie.title,
@@ -48,12 +49,12 @@ export default function MoviesHomepage() {
         <MoviesHeading />
         {moviesByGenre
           .filter((g) => g.movies.length >= 3)
-          .map(({ genre, movies }) => (
+          .map(({ genre, movies, delay }) => (
             <CarouselSection
               key={genre}
               title={genre}
               images={movies}
-              delay={7000}
+              delay={delay}
             />
           ))}
       </div>
