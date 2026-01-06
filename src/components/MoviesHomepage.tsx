@@ -32,7 +32,7 @@ export default function MoviesHomepage() {
       .sort(() => Math.random() - 0.5)
       .map(([genre, genreMovies]) => ({
         genre,
-        delay: Math.floor(Math.random() * 4000) + 5000, // Random delay between 5000-9000ms
+        delay: Math.floor(Math.random() * 1000) + 6500, // Random delay between 6500-7500ms
         movies: genreMovies.map((movie) => ({
           src: movie.image!,
           alt: movie.title,
