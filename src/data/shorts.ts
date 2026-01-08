@@ -48,4 +48,13 @@ export const shorts: Short[] = [
     image: "/ContentImages/blah-blah.jpg",
     shortLink: process.env.PUBLIC_SHORT_LINK_BLA_BLA,
   },
+  {
+    id: "the-superhero-spy-goes-to-the-underworld",
+    title: "The Superhero Spy Goes To The Underworld",
+    year: "December 26th, 2025",
+    creator: "Xtian",
+    image: "/ContentImages/the-superhero-spy.jpg",
+    shortLink:
+      process.env.PUBLIC_SHORT_LINK_SUPERHERO_SPY_GOES_TO_THE_UNDERWORLD,
+  },
 ];
