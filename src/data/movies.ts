@@ -305,4 +305,14 @@ export const movies: Movie[] = [
     genres: "Action/Adventure/Animation",
     image: "/ContentImages/friendsgiving-disaster.jpg",
   },
+  {
+    id: "starla-and-fish-the-last-moonflower",
+    title: "Starla And Fish The Last Moonflower",
+    year: "November 28th, 2025",
+    creator: "Sunflower Pictures",
+    movieLink:
+      process.env.PUBLIC_MOVIE_LINK_STARLA_AND_FISH_THE_LAST_MOONFLOWER,
+    genres: " Anination/Fantasy/Adventure",
+    image: "/ContentImages/starla-and-fish.jpg",
+  },
 ];
