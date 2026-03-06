@@ -58,7 +58,7 @@ export default function CarouselSection({
               className={
                 isSmall
                   ? "basis-1/2 md:basis-1/3 lg:basis-1/4"
-                  : "md:basis-full lg:basis-1/3"
+                  : "basis-full md:basis-1/2 lg:basis-1/3"
               }
             >
               <Link href={image.link}>
