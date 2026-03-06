@@ -312,7 +312,16 @@ export const movies: Movie[] = [
     creator: "Sunflower Pictures",
     movieLink:
       process.env.PUBLIC_MOVIE_LINK_STARLA_AND_FISH_THE_LAST_MOONFLOWER,
-    genres: " Anination/Fantasy/Adventure",
+    genres: "Anination/Fantasy/Adventure",
     image: "/ContentImages/starla-and-fish.jpg",
+  },
+  {
+    id: "little-league-in-his-place",
+    title: "Little League In His Place",
+    year: "November 21st, 2025",
+    creator: "Ethan Hall",
+    movieLink: process.env.PUBLIC_MOVIE_LINK_LITTLE_LEAGUE_IN_HIS_PLACE,
+    genres: "Animation/Sports/Drama",
+    image: "/ContentImages/little-league.jpg",
   },
 ];
