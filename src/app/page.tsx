@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { createMetadata } from "@/lib/metadata";
 import "./homepage.css";
 import { Footer } from "@/components/footer";
+import { RecommendedCarousel } from "@/components/RecommendedCarousel";
 
 export const metadata: Metadata = createMetadata({
   title: "Ocean+ - Home - Vyond movies and shorts",
@@ -26,6 +27,7 @@ export default function Home() {
         <h2 className="mb-1.5 leading-normal">
           Anywhere, anytime, for free, no restrictions.
         </h2>
+        <RecommendedCarousel />
         <div className="flex flex-col items-center justify-center space-y-3 md:flex-row md:space-y-0 md:space-x-3">
           <Link href="/movies">
             <input

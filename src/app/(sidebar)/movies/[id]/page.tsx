@@ -8,6 +8,7 @@ import SearchPage from "@/components/SearchPage";
 import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
 import "@/components/moviepage.css";
 import { MarkAsWatchedButton } from "@/components/MarkAsWatchedButton";
+import { MovieVisitTracker } from "@/components/MovieVisitTracker";
 
 export async function generateStaticParams() {
   return movies.map((movie) => ({ id: String(movie.id) }));
@@ -79,6 +80,7 @@ export default async function Page({ params }: Props) {
               movieId={String(movie.id)}
               movieTitle={movie.title}
             />
+            <MovieVisitTracker movieId={String(movie.id)} />
           </div>
           <div className="mt-2 mb-2 flex justify-center">
             <SearchPage />
