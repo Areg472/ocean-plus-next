@@ -38,24 +38,25 @@ export function RecommendedCarousel() {
 
     if (visitedGenres.size === 0) return [];
 
-    // 3. Find all movies that match any of these genres
+    // 3. Find all movies that match any of these genres, excluding already visited ones
     const candidates = movies.filter((movie) => {
       if (!movie.image) return false;
+      if (visitedIds.includes(String(movie.id))) return false;
       const movieGenres = movie.genres.split("/").map((g) => g.trim());
       return movieGenres.some((g) => visitedGenres.has(g));
     });
 
-    // 4. Randomly select 8 items
-    return [...candidates]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 8)
-      .map((movie) => ({
-        src: movie.image!,
-        alt: movie.title,
-        link: `/movies/${movie.id}`,
-        width: 2560,
-        height: 1440,
-      }));
+    // 4. Randomly select 8 unique items
+    const shuffled = [...candidates].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 8);
+
+    return selected.map((movie) => ({
+      src: movie.image!,
+      alt: movie.title,
+      link: `/movies/${movie.id}`,
+      width: 2560,
+      height: 1440,
+    }));
   }, [visitedIds]);
 
   if (!isLoaded || recommendedMovies.length === 0) {
@@ -63,11 +64,12 @@ export function RecommendedCarousel() {
   }
 
   return (
-    <div className="mt-8 mb-8">
+    <div className="mt-8 mb-8 mx-auto max-w-5xl">
       <CarouselSection
         title="Recommended for you"
         images={recommendedMovies}
         delay={7000}
+        isSmall
       />
     </div>
   );

@@ -21,16 +21,24 @@ interface CarouselSectionProps {
   title: string;
   images: CarouselImage[];
   delay?: number;
+  isSmall?: boolean;
 }
 
 export default function CarouselSection({
   title,
   images,
   delay = 7500,
+  isSmall = false,
 }: CarouselSectionProps) {
   return (
     <>
-      <h3 className="text-4xl leading-normal">{title}</h3>
+      <h3
+        className={
+          isSmall ? "text-2xl leading-normal" : "text-4xl leading-normal"
+        }
+      >
+        {title}
+      </h3>
       <Carousel
         className="carousel dark relative mt-4 px-4 md:px-12 lg:px-10"
         plugins={[
@@ -45,7 +53,14 @@ export default function CarouselSection({
       >
         <CarouselContent>
           {images.map((image, index) => (
-            <CarouselItem key={index} className="md:basis-full lg:basis-1/3">
+            <CarouselItem
+              key={index}
+              className={
+                isSmall
+                  ? "basis-1/2 md:basis-1/3 lg:basis-1/4"
+                  : "md:basis-full lg:basis-1/3"
+              }
+            >
               <Link href={image.link}>
                 <Image
                   src={image.src}
