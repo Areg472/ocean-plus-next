@@ -297,15 +297,6 @@ export const movies: Movie[] = [
     image: "/ContentImages/buff.jpg",
   },
   {
-    id: "friendsgiving-disaster",
-    title: "Friendsgiving Disaster",
-    year: "November 28th, 2025",
-    creator: "Sherrie Moussa",
-    movieLink: process.env.PUBLIC_MOVIE_LINK_FRIENDSGIVING_DISASTER,
-    genres: "Action/Adventure/Animation",
-    image: "/ContentImages/friendsgiving-disaster.jpg",
-  },
-  {
     id: "starla-and-fish-the-last-moonflower",
     title: "Starla And Fish The Last Moonflower",
     year: "November 28th, 2025",
