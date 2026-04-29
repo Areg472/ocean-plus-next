@@ -9,10 +9,8 @@ import {
   SquareActivity,
   ShieldEllipsis,
   Video,
-  Clapperboard,
   SquareCode,
   HandCoins,
-  Star,
 } from "lucide-react";
 import { motion } from "motion/react";
 import {
@@ -30,15 +28,7 @@ import {
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { movies } from "@/data/movies";
-import { shorts } from "@/data/shorts";
 
-const originals = shorts
-  .filter((short) => short.title === "The Random Green Blah Blah Thing")
-  .map((short) => ({
-    title: short.title,
-    url: short.id,
-    icon: Star,
-  }));
 
 const items = movies
   .sort((a, b) => a.title.localeCompare(b.title))
@@ -102,14 +92,6 @@ const footer = [
   },
 ];
 
-const shortItems = shorts
-  .filter((short) => short.title !== "The Random Green Blah Blah Thing")
-  .sort((a, b) => a.title.localeCompare(b.title))
-  .map((short) => ({
-    title: short.title,
-    url: short.id,
-    icon: Clapperboard,
-  }));
 
 export function AppSidebar() {
   const scrollRef = useRef(null);
@@ -122,9 +104,9 @@ export function AppSidebar() {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && localStorage.getItem(key) === "watched") {
-          const id =
-            key.startsWith("movie_") || key.startsWith("short_") ? key : key;
-          watched.add(id);
+          if (key.startsWith("movie_")) {
+            watched.add(key);
+          }
         }
       }
 
@@ -140,9 +122,8 @@ export function AppSidebar() {
     };
   }, []);
 
-  const isWatched = (id: string, type: "movie" | "short") => {
-    const cookieName = type === "movie" ? `movie_${id}` : `short_${id}`;
-    return watchedItems.has(cookieName);
+  const isWatched = (id: string) => {
+    return watchedItems.has(`movie_${id}`);
   };
 
   return (
@@ -171,43 +152,6 @@ export function AppSidebar() {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>O+ Originals</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {originals.map((originals) => (
-                <motion.div
-                  key={originals.title}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1, transition: { duration: 1 } }}
-                  viewport={{
-                    root: scrollRef,
-                    margin: "40px 0px 0px 0px",
-                    once: true,
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <SidebarMenuItem>
-                    <SidebarMenuButton asChild>
-                      <Link href={`/shorts/${originals.url}`}>
-                        <originals.icon />
-                        <span
-                          className={
-                            isWatched(originals.url, "short")
-                              ? "line-through"
-                              : undefined
-                          }
-                        >
-                          {originals.title}
-                        </span>
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                </motion.div>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        <SidebarGroup>
           <SidebarGroupLabel>Movies</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -229,49 +173,12 @@ export function AppSidebar() {
                         <item.icon />
                         <span
                           className={
-                            isWatched(item.url, "movie")
+                            isWatched(item.url)
                               ? "line-through"
                               : undefined
                           }
                         >
                           {item.title}
-                        </span>
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                </motion.div>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        <SidebarGroup>
-          <SidebarGroupLabel>Shorts</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {shortItems.map((shortItem) => (
-                <motion.div
-                  key={shortItem.title}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1, transition: { duration: 1 } }}
-                  viewport={{
-                    root: scrollRef,
-                    margin: "40px 0px 0px 0px",
-                    once: true,
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <SidebarMenuItem>
-                    <SidebarMenuButton asChild>
-                      <Link href={`/shorts/${shortItem.url}`}>
-                        <shortItem.icon />
-                        <span
-                          className={
-                            isWatched(shortItem.url, "short")
-                              ? "line-through"
-                              : undefined
-                          }
-                        >
-                          {shortItem.title}
                         </span>
                       </Link>
                     </SidebarMenuButton>

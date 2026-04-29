@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { movies } from "@/data/movies";
-import { shorts } from "@/data/shorts";
 
 interface HotjarWindow extends Window {
   hj?: (command: string, ...args: unknown[]) => void;
@@ -21,7 +20,6 @@ export default function NotFound() {
     "/movies",
     "/movies/movie-ratings",
     ...movies.map((m) => `/movies/${m.id}`),
-    ...shorts.map((s) => `/shorts/${s.id}`),
   ];
 
   useEffect(() => {

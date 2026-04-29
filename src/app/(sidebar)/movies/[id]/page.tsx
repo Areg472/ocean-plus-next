@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import SearchPage from "@/components/SearchPage";
-import DynamicAccordionForMoviesAndShorts from "@/components/DynamicAccordionForMoviesAndShorts";
+import DynamicAccordion from "@/components/DynamicAccordion";
 import "@/components/moviepage.css";
 import { MarkAsWatchedButton } from "@/components/MarkAsWatchedButton";
 import { MovieVisitTracker } from "@/components/MovieVisitTracker";
@@ -87,7 +87,7 @@ export default async function Page({ params }: Props) {
           </div>
           <div className="grid grid-cols-1 gap-4">
             <div className="w-full">
-              <DynamicAccordionForMoviesAndShorts
+              <DynamicAccordion
                 year={movie.year}
                 genres={movie.genres}
                 creator={movie.creator}

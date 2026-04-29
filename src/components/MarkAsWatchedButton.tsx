@@ -14,9 +14,7 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const storageKey = movieId.startsWith("short_")
-      ? movieId
-      : `movie_${movieId}`;
+    const storageKey = `movie_${movieId}`;
     const watched = localStorage.getItem(storageKey);
     if (watched === "watched") {
       setIsWatched(true);
@@ -26,9 +24,7 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const handleMarkAsWatched = async () => {
     setIsLoading(true);
     try {
-      const storageKey = movieId.startsWith("short_")
-        ? movieId
-        : `movie_${movieId}`;
+      const storageKey = `movie_${movieId}`;
       localStorage.setItem(storageKey, "watched");
       setIsWatched(true);
       window.dispatchEvent(new Event("watchedStatusChanged"));
@@ -42,9 +38,7 @@ export function MarkAsWatchedButton({ movieId }: MarkAsWatchedButtonProps) {
   const handleUnmarkAsWatched = async () => {
     setIsLoading(true);
     try {
-      const storageKey = movieId.startsWith("short_")
-        ? movieId
-        : `movie_${movieId}`;
+      const storageKey = `movie_${movieId}`;
       localStorage.removeItem(storageKey);
       setIsWatched(false);
       window.dispatchEvent(new Event("watchedStatusChanged"));

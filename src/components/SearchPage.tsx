@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLogger } from "@logtail/next";
 import { movies } from "@/data/movies";
-import { shorts } from "@/data/shorts";
 
 const items = [
   ...movies
@@ -13,13 +12,6 @@ const items = [
       title: movie.title,
       type: "movie",
       route: `/movies/${movie.id}`,
-    })),
-  ...shorts
-    .sort((a, b) => a.title.localeCompare(b.title))
-    .map((short) => ({
-      title: short.title,
-      type: "short",
-      route: `/shorts/${short.id}`,
     })),
 ];
 
@@ -76,10 +68,9 @@ export default function SearchPage() {
     };
   }, []);
 
-  const isWatched = (route: string, type: string) => {
+  const isWatched = (route: string) => {
     const id = route.split("/").pop();
-    const cookieName = type === "movie" ? `movie_${id}` : `short_${id}`;
-    return watchedItems.has(cookieName);
+    return watchedItems.has(`movie_${id}`);
   };
 
   const filtered = items
@@ -133,7 +124,7 @@ export default function SearchPage() {
       <div className="relative">
         <input
           type="text"
-          placeholder="Search movies & shorts..."
+          placeholder="Search movies..."
           value={query}
           onChange={handleQueryChange}
           onKeyDown={handleKeyDown}
@@ -174,7 +165,7 @@ export default function SearchPage() {
                     >
                       {item.type}
                     </span>
-                    {isWatched(item.route, item.type) && (
+                    {isWatched(item.route) && (
                       <span className="inline-block rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold tracking-wide uppercase text-gray-800">
                         watched
                       </span>

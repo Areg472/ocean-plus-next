@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "motion/react";
 
-export default function DynamicAccordionForMoviesAndShorts({
+export default function DynamicAccordion({
   year = "",
   creator = "",
   genres = "",

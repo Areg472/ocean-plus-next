@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 import { RecommendedCarousel } from "@/components/RecommendedCarousel";
 
 export const metadata: Metadata = createMetadata({
-  title: "Ocean+ - Home - Vyond movies and shorts",
+  title: "Ocean+ - Home - Vyond movies",
   description:
     "The place to watch all of your favorite Vyond and GoAnimate content, anywhere, anytime for free!",
   pathname: "/",

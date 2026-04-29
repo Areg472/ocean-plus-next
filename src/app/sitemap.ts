@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
 import { movies } from "@/data/movies";
-import { shorts } from "@/data/shorts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
@@ -10,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact-us",
     "/privacy-policy",
     "/movies",
-    "/shorts",
     "/movies/movie-ratings",
   ];
 
@@ -28,12 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.7,
-    })),
-    ...shorts.map((s) => ({
-      url: `${SITE_URL}/shorts/${s.id}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.6,
     })),
   ];
 
