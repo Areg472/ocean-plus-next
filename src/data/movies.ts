@@ -90,15 +90,6 @@ export const movies: Movie[] = [
     movieLink: process.env.PUBLIC_MOVIE_LINK_CFTWCFTL5,
   },
   {
-    id: "ga-bricks-the-movie",
-    title: "GA Bricks The Movie",
-    year: "April 1st, 2022",
-    creator: "JoJuanJohnson",
-    genres: "Animation/Action/Thriller",
-    image: "/ContentImages/ga-bricks.png",
-    movieLink: process.env.PUBLIC_MOVIE_LINK_GABRICKS,
-  },
-  {
     id: "goofus-and-doofus-1",
     title: "Goofus & Doofus",
     year: "March 2nd, 2023",
