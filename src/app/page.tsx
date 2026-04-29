@@ -19,10 +19,7 @@ export default function Home() {
       <Navbar />
       <div className="Headings text-center flex-1 flex flex-col justify-center mb-6">
         <h1 className="mb-4 leading-normal">
-          Vyond movies
-          <span className="block md:inline md:whitespace-normal whitespace-nowrap">
-            {" "}and shows.
-          </span>
+          Vyond movies.
         </h1>
         <h2 className="mb-1.5 leading-normal">
           Anywhere, anytime, for free, no restrictions.

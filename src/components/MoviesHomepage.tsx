@@ -65,7 +65,7 @@ export default function MoviesHomepage() {
 function MoviesHeading() {
   return (
     <>
-      <h1 className="mt-6 mb-4 leading-normal">Movies & shows!</h1>
+      <h1 className="mt-6 mb-4 leading-normal">The Movies!</h1>
 
       <div className="mt-2 mb-2 flex justify-center w-full px-4">
         <div className="w-full max-w-xl">
